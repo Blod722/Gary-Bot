@@ -7,6 +7,8 @@ const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalu
 
 const GaryMsg = ['hello gary','howdy gary','hey gary','hola gary','hi gary']
 
+var Roast = ["I bet this dude wants Djiby back.", "You look like the kinda girl (or guy if thats how you identify) that likes the Columbus Crew.",]
+
 var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","¿Cómo te va?","Hello","Hey, and before you ask. It's my name because thats what it is.","That's my name, don't wear it out!","Arrgg me boy, that's who me name is!"];
 
 
@@ -42,8 +44,37 @@ bot.on ("message", (message) => {
 
     if (msg.includes('hi gary')) {
         var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-            message.channel.send(message.author +', '+ GResponse)};
+            message.channel.send(message.author +', '+ GResponse)}
+    
+    if (message.content === '!github')
+        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md');
 
+    if (message.content === '!Github')
+        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md');
+    
+    if (message.content === '!GITHUB')
+        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md');
+
+    if (message.content === '!CincyChants')
+        message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Baily during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
+
+    if (message.content === '!Cincychants')
+        message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Baily during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
+
+    if (message.content === '!cincychants')
+        message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Baily during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
+
+    if (message.content === '!CINCYCHANTS')
+        message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Baily during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
+
+    if (message.content === '!cincyChants')
+        message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Baily during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
+
+    if (msg.includes('roast me gary')) {
+        message.reply(message.author.avatarURL)
+            var RResponse = Roast[Math.floor(Math.random() * (Roast.length -1 ) + 1)]
+                message.channel.send(RResponse)};
+    
     if (msg.includes('damn it'))
     message.react("🇩")
         .then(() => message.react("🇦")
