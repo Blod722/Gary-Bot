@@ -47,13 +47,13 @@ bot.on ("message", (message) => {
             message.channel.send(message.author +', '+ GResponse)}
     
     if (message.content === '!github')
-        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md');
+        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
 
     if (message.content === '!Github')
-        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md');
+        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
     
     if (message.content === '!GITHUB')
-        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md');
+        message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
 
     if (message.content === '!CincyChants')
         message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Baily during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
