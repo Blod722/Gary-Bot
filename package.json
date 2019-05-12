@@ -2,7 +2,7 @@
   "name": "gary", 
   "version": "0.8.2",
   "description": "Beacuse that's what it's name is.",
-  "main": "index.js",
+  "main": "garycode.js",
   "scripts": {
     "test": "dsa",
     "node .": "node run index.js"
