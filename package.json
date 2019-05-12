@@ -1,0 +1,22 @@
+{
+  "name": "gary", 
+  "version": "0.7",
+  "description": "Beacuse that's what it's name is.",
+  "main": "index.js",
+  "scripts": {
+    "test": "dsa",
+    "node .": "node run index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blod722/Gary-Bot.git"
+  },
+  "keywords": [
+    "dsa"
+  ],
+  "author": "Blod",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
