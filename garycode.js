@@ -104,17 +104,17 @@ if (msg.includes('hello')) {
     const yellowemoji = message.guild.emojis.find(emoji => emoji.name === 'yellowcard');
         message.react(yellowemoji)};
 
-    if (msg.includes("ope")) {
-        const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
-            message.react(opeemoji)};
+//    if (msg.includes("ope")) {
+//        const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
+//            message.react(opeemoji)};
 
 //    if (msg.includes("oi")) {
 //        const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
 //            message.react(oiemoji)};
 
-    if (msg.includes("oof")) {
-        const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
-            message.react(oofemoji)};
+//    if (msg.includes("oof")) {
+//        const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
+//            message.react(oofemoji)};
 
     if (msg.includes(':upgary:'))
     (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
