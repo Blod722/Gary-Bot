@@ -26,25 +26,30 @@ bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
 
-    if (msg.includes('hello gary')) {
-        var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-            message.channel.send(message.author +', '+ GResponse)};
-
-    if (msg.includes('howdy gary')) {
+if (msg.includes('hello')) {
+        if (msg.includes("gary")) {
             var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)};
+                message.channel.send(message.author +', '+ GResponse)}};
 
-    if (msg.includes('hey gary')) {
-        var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)};
+    if (msg.includes('howdy')) {
+        if (msg.includes("gary")) {
+            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+                message.channel.send(message.author +', '+ GResponse)}};
 
-    if (msg.includes('hola gary')) {
-        var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-            message.channel.send(message.author +', '+ GResponse)};
+    if (msg.includes('hey')) {
+        if (msg.includes("gary")) {
+            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+                message.channel.send(message.author +', '+ GResponse)}};
 
-    if (msg.includes('hi gary')) {
-        var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-            message.channel.send(message.author +', '+ GResponse)}
+    if (msg.includes('hola')) {
+        if (msg.includes("gary")) {
+            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+                message.channel.send(message.author +', '+ GResponse)}};
+
+    if (msg.includes('hi')) {
+        if (msg.includes("gary")) {
+            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+                message.channel.send(message.author +', '+ GResponse)}};
     
     if (message.content === '!github')
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
