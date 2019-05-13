@@ -46,10 +46,10 @@ if (msg.includes('hello')) {
             var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GResponse)}};
 
-    if (msg.includes('hi')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
+//    if (msg.includes('hi')) {
+//        if (msg.includes("gary")) {
+//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GResponse)}};
     
     if (message.content === '!github')
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
@@ -108,9 +108,9 @@ if (msg.includes('hello')) {
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
             message.react(opeemoji)};
 
-    if (msg.includes("oi")) {
-        const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
-            message.react(oiemoji)};
+//    if (msg.includes("oi")) {
+//        const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
+//            message.react(oiemoji)};
 
     if (msg.includes("oof")) {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
