@@ -34,7 +34,7 @@ bot.on ("message", (message) => {
 
     if (msg.includes('morning'))
         if (msg.includes("gary")) {
-            var GMResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+            var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GMResponse)};
     
     if (msg.includes('night'))
