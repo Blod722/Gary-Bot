@@ -14,7 +14,7 @@ var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime
 
 var GaryNight = ["Goodnight", "Time to hit the hay, is it not?", "Going to bed already?", "Can't win FCC games when you're tired.", "The night is young! Why go to bed so early?", "Don't let the bed bugs bite!"]
 
-var Roast = ["I bet this dude wants Djiby back.", "You look like the kinda girl (or guy if thats how you identify) that likes the Columbus Crew.", "Yeah, you definitely think you're fancy by calling it Fussball.", "Looks like a straight up Louisville City FC fan.", "You probobly say that the Bailey doesn't sound loud enough after every game", '"Detroit City FC is on the come up" headass', ]
+//var Roast = ["I bet this dude wants Djiby back.", "You look like the kinda girl (or guy if thats how you identify) that likes the Columbus Crew.", "Yeah, you definitely think you're fancy by calling it Fussball.", "Looks like a straight up Louisville City FC fan.", "You probobly say that the Bailey doesn't sound loud enough after every game", '"Detroit City FC is on the come up" headass', ]
 
 const prefix = "!";
 
