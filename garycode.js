@@ -62,7 +62,7 @@ bot.on ("message", (message) => {
             var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GResponse)}};
 
-    if (message.content.toLowerCase() == "hi")) {
+    if (message.content.toLowerCase() == "hi") {
         if (msg.includes("gary")) {
             var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GResponse)}};
