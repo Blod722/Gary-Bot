@@ -1,6 +1,6 @@
 {
   "name": "gary", 
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Beacuse that's what it's name is.",
   "main": "garycode.js",
   "scripts": {
