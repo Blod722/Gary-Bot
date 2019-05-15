@@ -42,10 +42,10 @@ bot.on ("message", (message) => {
             var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GMResponse)};
     
-    if (msg.includes('night'))
-        if (msg.includes("gary")) {
-            var GNResponse = GaryNight[Math.floor(Math.random() * (GaryNight.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GNResponse)};
+//    if (msg.includes('night'))
+//        if (msg.includes("gary")) {
+//            var GNResponse = GaryNight[Math.floor(Math.random() * (GaryNight.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GNResponse)};
 
     if (msg.includes('hello'))
         if (msg.includes("gary")) {
