@@ -31,6 +31,16 @@ bot.on ("message", (message) => {
     if (message.author.bot) return;
 
     msg = message.content.toLowerCase();
+    
+    if (message.author.id === '105094347267022848') {
+            message.react("🇲")
+                .then(() => message.react("🇦")  
+                .then(() => message.react("🇰")
+                .then(() => message.react("🇪")
+                .then(() => message.react("🇵")
+                .then(() => message.react("🇴")
+                .then(() => message.react("🅾")
+                ))))))};
 
     if (msg.includes('morning'))
         if (msg.includes("gary")) {
