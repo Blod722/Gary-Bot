@@ -34,9 +34,6 @@ bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
 
-    if (msg.startsWith("test"))
-        message.channel.send("it works");
-
     if (msg.includes('morning'))
         if (msg.includes("gary")) {
             var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
@@ -66,12 +63,12 @@ bot.on ("message", (message) => {
         if (msg.includes("gary")) {
             var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GResponse)}};
-
-    if (message.content.toLowerCase() == "hi") {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
-
+// remind me later to fix this i dont have time to atm
+//  if (message.content.toLowerCase() == "hi") {
+//        if (msg.includes("gary")) {
+//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GResponse)}};
+//
 
     if (msg.startsWith(prefix + ' github'))
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
