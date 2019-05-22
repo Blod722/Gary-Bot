@@ -28,6 +28,16 @@ bot.on('ready', () =>{
         }, 25000);
     });
 
+bot.on ("guildMemberAdd", member => {
+    var Welcome = ["Congratulations** " + member.user.username + "**, You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical!** " + member.user.username + "**, Is now now playing for **/r/FCCincinnati**!"]
+    var WResponse = Welcome[Math.floor(Math.random() * (Welcome.length -1 ) + 1)]
+    member.guild.channels.get('456926862405271554').send(WResponse)});
+
+bot.on ("guildMemberRemove", member => {
+    var Left = ["Congratulations** " + member.user.username + "**, You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical!** " + member.user.username + "**, Is now now playing for **/r/FCCincinnati**!"]
+    var LResponse = Left[Math.floor(Math.random() * (Left.length -1 ) + 1)]
+    member.guild.channels.get('456926862405271554').send(LResponse)});
+
 bot.on ("message", (message) => {
 
     if (message.author.bot) return;
