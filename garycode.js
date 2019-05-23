@@ -1,6 +1,7 @@
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
 const {discord_token} = require('./config.json');
+const bonerpatrol = /^bone$|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 
 const token = discord_token;
 
@@ -118,10 +119,11 @@ bot.on ("message", (message) => {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
             message.react(oofemoji)};
 
-    if (message.content.toLowerCase() == "bone") {
+    //if (message.content.toLowerCase() == "bone") {
+    if (bonerpatrol.test(message.content.toLowerCase())) {
         const boneemoji = message.guild.emojis.find(emoji => emoji.name === 'bone');
             message.react(boneemoji)};
-
+    
     if (message.content.toLowerCase() == "oui") {
         const mathieudeplagneemoji = message.guild.emojis.find(emoji => emoji.name === 'mathieudeplagne');
             message.react(mathieudeplagneemoji)};
