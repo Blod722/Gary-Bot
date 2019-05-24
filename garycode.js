@@ -51,8 +51,6 @@ var GaryNight = ["Goodnight", "Time to hit the hay, is it not?", "Going to bed a
 const bonerpatrol = /^bone$|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const prefix = "gary";
 
-
-
 //Command hook
 bot.on ("message", (message) => {
     
@@ -88,7 +86,7 @@ bot.on ("message", (message) => {
             var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
                 message.channel.send(message.author +', '+ GResponse)}};
     
-    //Prefixed commands
+//Prefixed commands
     if (msg.startsWith(prefix + ' github'))
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
         
@@ -111,15 +109,15 @@ bot.on ("message", (message) => {
             .then(() => message.react("🇹")
         )))); 
     
-// this should respond to Damet Bot when he says 'pineapple on pizza is ok'
+//this should respond to Damet Bot when he says 'pineapple on pizza is ok'
     if (message.content === 'pineapple on pizza is ok')
         message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.");
 
-// this should respond to anyone that says 'koch bot'
+//this should respond to anyone that says 'koch bot'
     if (msg.includes("koch bot"))
         message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary');
     
-// this should respond to anyone that says 'endgame'
+//this should respond to anyone that says 'endgame'
     if (msg.includes('endgame'))
         message.channel.send('At the very end, Thanos finally wins, he snaps his fingers again and head coach Alan Koch is fired.');
     
@@ -153,6 +151,7 @@ bot.on ("message", (message) => {
     if (msg.includes("bmulley")) {
         const mulleyemoji = message.guild.emojis.find(emoji => emoji.name === 'mulley');
             message.react(mulleyemoji)};
+
 // anytime someone says upgary it responds with the upgary photo.
     if (msg.startsWith('upgary'))
     (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
