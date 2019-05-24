@@ -6,6 +6,14 @@ const token = discord_token;
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2019 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Richey save another ball.','Koch get cut.','Damet attempt to recover the team.','Berding as he makes a press statement.','Whoever this new Blond Haired guy play.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.'];
+var GameDayDates = ["05/20/2019", "05/25/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
+
+//This next part is specifically code to check what day it is.
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = mm + '/' + dd + '/' + yyyy;
 
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
@@ -17,15 +25,20 @@ bot.on('ready', () =>{
         }, 25000);
     });
 
-//When someone joins it will respond with a message in the Welcome Varable - 456926862405271554 is the Channel ID for #Roster-Signings
+//When someone joins it'll check to see if it's game day, if not, it'll send a regualar welcome message - 456926862405271554 is the Channel ID for #Roster-Signings
 bot.on ("guildMemberAdd", member => {
-    var Welcome = ["Congratulations** " + member.user.username + "**, You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical!** " + member.user.username + "**, Is now now playing for **/r/FCCincinnati**!"]
+    if (GameDayDates.includes(today)) {
+        var GDWelcome = ["Congratulations** " + member.user.username + "**, You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team! We're currently in #matchthreads if you wanna discuss the on-going FCC game!", "It's offical!** " + member.user.username + "**, Is now now playing for **/r/FCCincinnati**! We're currently in #matchthreads if you wanna discuss the on-going FCC game!", "Welcome to the club ** " + member.user.username + "**, We're currently in #matchthreads if you wanna hop in and talk about the current FCC Game!"] 
+        var GDWResponse = GDWelcome[Math.floor(Math.random() * (GDWelcome.length -1 ) + 1)]
+            member.guild.channels.get('456926862405271554').send(GDWResponse)}
+    else {
+    var Welcome = ["Congratulations** " + member.user.username + "**, You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical!** " + member.user.username + "**, Is now now playing for **/r/FCCincinnati**!", "This just in,**" + member.user.username + "** was just traded to **/r/FCCincinnati!"]
     var WResponse = Welcome[Math.floor(Math.random() * (Welcome.length -1 ) + 1)]
-    member.guild.channels.get('456926862405271554').send(WResponse)});
+    member.guild.channels.get('456926862405271554').send(WResponse)}});
 
 //When someone leave it will respond with a message in the Left Varable - 456926862405271554 is the Channel ID for #Roster-Signings
 bot.on ("guildMemberRemove", member => {
-    var Left = ["Congratulations** " + member.user.username + "**, You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical!** " + member.user.username + "**, Is now now playing for **/r/FCCincinnati**!"]
+    var Left = ["**" + member.user.username + "** ripped their contract in half, I guess that mean's it's no longer valid.", member.user.username + "**'s has not been renewed for **/r/FCCincinnati**.", "**" + member.user.username + "** decided to go play for /r/TheMassive."]
     var LResponse = Left[Math.floor(Math.random() * (Left.length -1 ) + 1)]
     member.guild.channels.get('456926862405271554').send(LResponse)});
 
@@ -37,6 +50,8 @@ var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime
 var GaryNight = ["Goodnight", "Time to hit the hay, is it not?", "Going to bed already?", "Can't win FCC games when you're tired.", "The night is young! Why go to bed so early?", "Don't let the bed bugs bite!"]
 const bonerpatrol = /^bone$|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const prefix = "gary";
+
+
 
 //Command hook
 bot.on ("message", (message) => {
