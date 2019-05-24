@@ -48,7 +48,7 @@ var Starters = ['If you could sign any soccer player you wanted for FC Cincinnat
 var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","¿Cómo te va?","Hello","Hey, and before you ask. It's my name because thats what it is.","That's my name, don't wear it out!","Arrgg me boy, that's who me name is!"];
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 var GaryNight = ["Goodnight", "Time to hit the hay, is it not?", "Going to bed already?", "Can't win FCC games when you're tired.", "The night is young! Why go to bed so early?", "Don't let the bed bugs bite!"]
-const bonerpatrol = /^bone$|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
+const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const prefix = "gary";
 
 //Command hook
