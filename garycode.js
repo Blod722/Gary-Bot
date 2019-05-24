@@ -1,7 +1,7 @@
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
 const {discord_token} = require('./config.json');
-const bonerpatrol = /^bone$|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
+const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 
 const token = discord_token;
 
