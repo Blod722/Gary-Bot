@@ -31,17 +31,17 @@ bot.on ("guildMemberAdd", member => {
     if (GameDayDates.includes(today)) {
         var GDWelcome = ["Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati**! Welcome to the team! We're currently in #matchthreads if you wanna discuss the on-going FCC game!", "It's offical! " + member + ", Is now now playing for **/r/FCCincinnati**! We're currently in #matchthreads if you wanna discuss the on-going FCC game!", "Welcome to the club " + member + ", We're currently in #matchthreads if you wanna hop in and talk about the current FCC Game!", "This just in, " + member + " was just traded to **/r/FCCincinnati**! We're currently in #matchthreads if you wanna hop in and talk about the current FCC Game!"] 
         var GDWResponse = GDWelcome[Math.floor(Math.random() * (GDWelcome.length -1 ) + 1)]
-            member.guild.channels.get('542186166393372689').send(GDWResponse)}
+            member.guild.channels.get('456926862405271554').send(GDWResponse)}
     else {
     var Welcome = ["Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical! " + member + ", Is now now playing for **/r/FCCincinnati**!", "This just in, " + member + " was just traded to **/r/FCCincinnati**!"]
     var WResponse = Welcome[Math.floor(Math.random() * (Welcome.length -1 ) + 1)]
-    member.guild.channels.get('542186166393372689').send(WResponse)}});
+    member.guild.channels.get('456926862405271554').send(WResponse)}});
 
 //When someone leave it will respond with a message in the Left Varable - 456926862405271554 is the Channel ID for #Roster-Signings
 bot.on ("guildMemberRemove", member => {
     var Left = [member + " ripped their contract in half, I guess that mean's it's no longer valid.", member + "'s contract has not been renewed for **/r/FCCincinnati**.", member + " decided to go play for /r/TheMassive."]
     var LResponse = Left[Math.floor(Math.random() * (Left.length -1 ) + 1)]
-    member.guild.channels.get('542186166393372689').send(LResponse)});
+    member.guild.channels.get('456926862405271554').send(LResponse)});
 
 // Message Constants and Varibles
 const GaryMsg = ['hello gary','howdy gary','hey gary','hola gary','hi gary']
