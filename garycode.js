@@ -100,6 +100,16 @@ bot.on ("message", (message) => {
         var SResponse = Starters[Math.floor(Math.random() * (Starters.length -1 ) + 1)]
             message.channel.send(SResponse)};
     
+    if (msg.startsWith(prefix + ' debug')) {
+        debug = new Discord.RichEmbed ()
+            .setAuthor("Gary Bot Debug Menu")
+            .setDescription ("")
+            .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
+            .addField ("Version - 1.2.0", "Last Update - 5/24/19")
+            .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
+            .setColor ("F26522");
+        message.channel.send(debug)};
+    
 //When someone says 'Damn It' it reacts in letters saying 'Damet'
     if (msg.includes('damn it'))
         message.react("🇩")
