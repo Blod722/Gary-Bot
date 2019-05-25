@@ -39,7 +39,7 @@ bot.on ("guildMemberAdd", member => {
 
 //When someone leave it will respond with a message in the Left Varable - 456926862405271554 is the Channel ID for #Roster-Signings
 bot.on ("guildMemberRemove", member => {
-    var Left = [member + " ripped their contract in half, I guess that mean's it's no longer valid.", member + "'s has not been renewed for **/r/FCCincinnati**.", member + " decided to go play for /r/TheMassive."]
+    var Left = [member + " ripped their contract in half, I guess that mean's it's no longer valid.", member + "'s contract has not been renewed for **/r/FCCincinnati**.", member + " decided to go play for /r/TheMassive."]
     var LResponse = Left[Math.floor(Math.random() * (Left.length -1 ) + 1)]
     member.guild.channels.get('542186166393372689').send(LResponse)});
 
