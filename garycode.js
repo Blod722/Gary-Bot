@@ -2,6 +2,7 @@
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
 const {discord_token} = require('./config.json');
+
 const token = discord_token;
 
 //Bot Wide Variables & Constants
@@ -149,11 +150,11 @@ bot.on ("message", (message) => {
     if (message.content.toLowerCase() == "oof") {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
             message.react(oofemoji)};
-
+  
    if (bonerpatrol.test(message.content.toLowerCase())) {
         const boneemoji = message.guild.emojis.find(emoji => emoji.name === 'bone');
             message.react(boneemoji)};
-
+    
     if (message.content.toLowerCase() == "oui") {
         const mathieudeplagneemoji = message.guild.emojis.find(emoji => emoji.name === 'mathieudeplagne');
             message.react(mathieudeplagneemoji)};
