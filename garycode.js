@@ -52,6 +52,11 @@ var GaryNight = ["Goodnight", "Time to hit the hay, is it not?", "Going to bed a
 const prefix = "gary";
 // Emote constants & varibles
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
+const oofpatrol = /^oof\b|\s?[^a-z]+\boof[^a-z]?\b|^oof[^a-z]$/i;
+const oipatrol = /^oi\b|\s?[^a-z]+\boi[^a-z]?\b|^oi[^a-z]$/i;
+const opesies = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
+const ouipatrol = /^oui\b|\s?[^a-z]+\boui[^a-z]?\b|^oui[^a-z]$/i;
+const bmulleypatrol = /^bmulley\b|\s?[^a-z]+\bbmulley[^a-z]?\b|^bmulley[^a-z]$/i;
 
 //Command hook
 bot.on ("message", (message) => {
@@ -107,7 +112,7 @@ bot.on ("message", (message) => {
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.1", "Last Update - 5/25/19")
+            .addField ("Version - 1.3.0", "Last Update - 5/25/19")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -140,27 +145,27 @@ bot.on ("message", (message) => {
     const yellowemoji = message.guild.emojis.find(emoji => emoji.name === 'yellowcard');
         message.react(yellowemoji)};
 
-    if (message.content.toLowerCase() == "ope") {
+    if (opesies.test(message.content.toLowerCase())) {
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
             message.react(opeemoji)};
 
-    if (message.content.toLowerCase() == "oi") {
+    if (oipatrol.test(message.content.toLowerCase())) {
         const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
             message.react(oiemoji)};
 
-    if (message.content.toLowerCase() == "oof") {
+    if (oofpatrol.test(message.content.toLowerCase())) {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
             message.react(oofemoji)};
   
-   if (bonerpatrol.test(message.content.toLowerCase())) {
+    if (bonerpatrol.test(message.content.toLowerCase())) {
         const boneemoji = message.guild.emojis.find(emoji => emoji.name === 'bone');
             message.react(boneemoji)};
     
-    if (message.content.toLowerCase() == "oui") {
+    if (ouipatrol.test(message.content.toLowerCase())) {
         const mathieudeplagneemoji = message.guild.emojis.find(emoji => emoji.name === 'mathieudeplagne');
             message.react(mathieudeplagneemoji)};
 
-    if (msg.includes("bmulley")) {
+    if (bmulleypatrol.test(message.content.toLowerCase())) {
         const mulleyemoji = message.guild.emojis.find(emoji => emoji.name === 'mulley');
             message.react(mulleyemoji)};
 
