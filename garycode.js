@@ -106,7 +106,7 @@ bot.on ("message", (message) => {
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("Last Update - 5/26/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.2", "Released 5/26/2019")
+            .addField ("Version - 1.2.2", "Released 5/27/2019")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
