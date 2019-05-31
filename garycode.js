@@ -7,7 +7,7 @@ const token = discord_token;
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2019 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Richey save another ball.','Koch get cut.','Damet attempt to recover the team.','Berding as he makes a press statement.','Whoever this new Blond Haired guy play.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.'];
-var GameDayDates = ["05/26/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
+var GameDayDates = ["05/25/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
 
 //This next part is specifically code to check what day it is.
 var today = new Date();
@@ -32,17 +32,17 @@ bot.on ("guildMemberAdd", member => {
     if (GameDayDates.includes(today)) {
         var GDWelcome = ["Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati**! Welcome to the team! We're currently in <$336914522747174922> if you wanna discuss the on-going FCC game!", "It's offical! " + member + ", Is now now playing for **/r/FCCincinnati**! We're currently in <#336914522747174922> if you wanna discuss the on-going FCC game!", "Welcome to the club " + member + ", We're currently in <#336914522747174922> if you wanna hop in and talk about the current FCC Game!", "This just in, " + member + " was just traded to **/r/FCCincinnati**! We're currently in <#336914522747174922> if you wanna hop in and talk about the current FCC Game!"] 
         var GDWResponse = GDWelcome[Math.floor(Math.random() * (GDWelcome.length -1 ) + 1)]
-            member.guild.channels.get('542186166393372689').send(GDWResponse)}
+            member.guild.channels.get('456926862405271554').send(GDWResponse)}
     else {
     var Welcome = ["Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical! " + member + ", Is now now playing for **/r/FCCincinnati**!", "This just in, " + member + " was just traded to **/r/FCCincinnati**!"]
     var WResponse = Welcome[Math.floor(Math.random() * (Welcome.length -1 ) + 1)]
-    member.guild.channels.get('542186166393372689').send(WResponse)}});
+    member.guild.channels.get('456926862405271554').send(WResponse)}});
 
 //When someone leave it will respond with a message in the Left Varable - 456926862405271554 is the Channel ID for #Roster-Signings - 336914522747174922 is the Channel ID for #matchthreads
 bot.on ("guildMemberRemove", member => {
     var Left = [member.user.username + " ripped their contract in half, I guess that mean's it's no longer valid.", member.user.username + "'s contract has not been renewed for **/r/FCCincinnati**.", member.user.username + " decided to go play for /r/TheMassive."]
     var LResponse = Left[Math.floor(Math.random() * (Left.length -1 ) + 1)]
-    member.guild.channels.get('542186166393372689').send(LResponse)});
+    member.guild.channels.get('456926862405271554').send(LResponse)});
 
 // Message Constants and Varibles
 const GaryMsg = ['hello gary','howdy gary','hey gary','hola gary','hi gary']
