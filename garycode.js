@@ -116,7 +116,7 @@ bot.on ("message", (message) => {
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("Last Update - 6/06/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.3", "Released 6/06/2019")
+            .addField ("Version - 1.2.4", "Released 7/12/2019")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -172,10 +172,6 @@ bot.on ("message", (message) => {
     if (msg.includes("bmulley")) {
         const mulleyemoji = message.guild.emojis.find(emoji => emoji.name === 'mulley');
             message.react(mulleyemoji)};
-
-// anytime someone says upgary it responds with the upgary photo.
-    if (msg.startsWith('upgary'))
-    (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
 
 // When someone asks why his name is gary it responds with 'cause thats what my name is'
     if (msg.includes("name")) {
