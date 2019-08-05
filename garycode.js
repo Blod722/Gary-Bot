@@ -60,6 +60,8 @@ var Starters = ['If you could sign any soccer player you wanted for FC Cincinnat
 var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","¿Cómo te va?","Hello","Hey, and before you ask. It's my name because thats what it is.","That's my name, don't wear it out!","Arrgg me boy, that's who me name is!"];
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
+const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
+const ooftastic = /^oof\b|\s?[^a-z]+\boof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
 
 //Command hook
@@ -114,9 +116,9 @@ bot.on ("message", (message) => {
         if (msg.startsWith(prefix + ' debug')) {
         debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 6/06/2019")
+            .setDescription ("Last Update - 8/05/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.3", "Released 6/06/2019")
+            .addField ("Version - 1.2.4", "Released 8/05/2019")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -149,19 +151,19 @@ bot.on ("message", (message) => {
     const yellowemoji = message.guild.emojis.find(emoji => emoji.name === 'yellowcard');
         message.react(yellowemoji)};
 
-    if (message.content.toLowerCase() == "ope") {
+    if (operoni.test(message.content.toLowerCase())) {
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
-            message.react(opeemoji)};
-
+            message.react(opeemoji)};   
+    
     if (message.content.toLowerCase() == "oi") {
         const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
             message.react(oiemoji)};
-
-    if (message.content.toLowerCase() == "oof") {
+    
+    if (ooftastic.test(message.content.toLowerCase())) {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
             message.react(oofemoji)};
-  
-   if (bonerpatrol.test(message.content.toLowerCase())) {
+    
+    if (bonerpatrol.test(message.content.toLowerCase())) {
         const boneemoji = message.guild.emojis.find(emoji => emoji.name === 'bone');
             message.react(boneemoji)};
     
