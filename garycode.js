@@ -116,9 +116,9 @@ bot.on ("message", (message) => {
         if (msg.startsWith(prefix + ' debug')) {
         debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 6/06/2019")
+            .setDescription ("Last Update - 8/05/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.3", "Released 6/06/2019")
+            .addField ("Version - 1.2.4", "Released 8/05/2019")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
