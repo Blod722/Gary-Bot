@@ -60,6 +60,8 @@ var Starters = ['If you could sign any soccer player you wanted for FC Cincinnat
 var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","¿Cómo te va?","Hello","Hey, and before you ask. It's my name because thats what it is.","That's my name, don't wear it out!","Arrgg me boy, that's who me name is!"];
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
+const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
+const ooftastic = /^oof\b|\s?[^a-z]+\boof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
 
 //Command hook
@@ -149,19 +151,19 @@ bot.on ("message", (message) => {
     const yellowemoji = message.guild.emojis.find(emoji => emoji.name === 'yellowcard');
         message.react(yellowemoji)};
 
-    if (message.content.toLowerCase() == "ope") {
+    if (operoni.test(message.content.toLowerCase())) {
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
-            message.react(opeemoji)};
-
+            message.react(opeemoji)};   
+    
     if (message.content.toLowerCase() == "oi") {
         const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
             message.react(oiemoji)};
-
-    if (message.content.toLowerCase() == "oof") {
+    
+    if (ooftastic.test(message.content.toLowerCase())) {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
             message.react(oofemoji)};
-  
-   if (bonerpatrol.test(message.content.toLowerCase())) {
+    
+    if (bonerpatrol.test(message.content.toLowerCase())) {
         const boneemoji = message.guild.emojis.find(emoji => emoji.name === 'bone');
             message.react(boneemoji)};
     
