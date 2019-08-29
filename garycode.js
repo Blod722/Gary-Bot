@@ -74,30 +74,30 @@ bot.on ("message", (message) => {
     msg = message.content.toLowerCase();
     
 //Good morning & Goodnight commands
-    if (msg.includes('morning'))
-        if (msg.includes("gary")) {
-            var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GMResponse)};
+//    if (msg.includes('morning'))
+//        if (msg.includes("gary")) {
+//            var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GMResponse)};
 
-    if (msg.includes('hello'))
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)};
+//    if (msg.includes('hello'))
+//        if (msg.includes("gary")) {
+//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GResponse)};
 
-    if (msg.includes('howdy')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
+//    if (msg.includes('howdy')) {
+//        if (msg.includes("gary")) {
+//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GResponse)}};
 
-    if (msg.includes('hey')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
+//    if (msg.includes('hey')) {
+//        if (msg.includes("gary")) {
+//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GResponse)}};
 
-    if (msg.includes('hola')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
+//    if (msg.includes('hola')) {
+//        if (msg.includes("gary")) {
+//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
+//                message.channel.send(message.author +', '+ GResponse)}};
     
 //Prefixed commands
     if (msg.startsWith(prefix + ' github'))
@@ -116,9 +116,9 @@ bot.on ("message", (message) => {
         if (msg.startsWith(prefix + ' debug')) {
         debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 8/05/2019")
+            .setDescription ("Last Update - 8/29/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.4", "Released 8/05/2019")
+            .addField ("Version - 1.2.5", "Released 8/29/2019")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -176,8 +176,8 @@ bot.on ("message", (message) => {
             message.react(mulleyemoji)};
 
 // anytime someone says upgary it responds with the upgary photo.
-    if (msg.startsWith('upgary'))
-    (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
+//    if (msg.startsWith('upgary'))
+//    (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
 
 // When someone asks why his name is gary it responds with 'cause thats what my name is'
     if (msg.includes("name")) {
