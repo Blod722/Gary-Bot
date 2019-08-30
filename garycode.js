@@ -71,32 +71,6 @@ bot.on ("message", (message) => {
 //Any command starting with 'msg.' makes the command case-insensitive.
     msg = message.content.toLowerCase();
     
-//Good morning & Goodnight commands
-    if (msg.includes('morning'))
-        if (msg.includes("gary")) {
-            var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GMResponse)};
-
-    if (msg.includes('hello'))
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)};
-
-    if (msg.includes('howdy')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
-
-    if (msg.includes('hey')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
-
-    if (msg.includes('hola')) {
-        if (msg.includes("gary")) {
-            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-                message.channel.send(message.author +', '+ GResponse)}};
-    
 //Prefixed commands
     if (msg.startsWith(prefix + ' github'))
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
@@ -114,9 +88,9 @@ bot.on ("message", (message) => {
     if (msg.startsWith(prefix + ' debug')) {
         debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 5/31/2019")
-            .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3.0", "Released xx/xx/xxxx")
+            .setDescription ("Last Update - 8/30/2019")
+            .setFooter("Created by Bmulley#4379, Blod#6563, BzzLghtyr#0001, for /r/FCCincinnati Discord.")
+            .addField ("Version - 1.3.0")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
