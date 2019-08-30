@@ -89,7 +89,7 @@ bot.on ("message", (message) => {
         debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("Last Update - 8/30/2019")
-            .setFooter("Created by Bmulley#4379, Blod#6563, BzzLghtyr#0001, for /r/FCCincinnati Discord.")
+            .setFooter("Created by Bmulley, Blod, Buzz, PW, and Henson for /r/FCCincinnati Discord.")
             .addField ("Version - 1.3.0")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
@@ -111,10 +111,6 @@ bot.on ("message", (message) => {
 //this should respond to anyone that says 'koch bot'
     if (msg.includes("koch bot"))
         message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary');
-    
-//this should respond to anyone that says 'endgame'
-    if (msg.includes('endgame'))
-        message.channel.send('At the very end, Thanos finally wins, he snaps his fingers again and head coach Alan Koch is fired.');
     
 //Emoting commands
     if (msg.includes("guido")){
@@ -146,10 +142,6 @@ bot.on ("message", (message) => {
     if (msg.includes("bmulley")) {
         const mulleyemoji = message.guild.emojis.find(emoji => emoji.name === 'mulley');
             message.react(mulleyemoji)};
-
-// anytime someone says upgary it responds with the upgary photo.
-    if (msg.startsWith('upgary'))
-    (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
 
 // When someone asks why his name is gary it responds with 'cause thats what my name is'
     if (msg.includes("name")) {
