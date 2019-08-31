@@ -11,9 +11,13 @@ Gary Bot is ran on Ubuntu 18.04.2 LTS based VM graciously hosted for free by Bmu
 
 # Current Commands & Functions
 **gary github** - Brings up an info box about this github page, as well as a link.
+
 **gary cincy chants** - Info box about Cincy Chants.
+
 **gary cincychants** - Same as above.
+
 **gary topic** - Brings up a topic to talk about.
+
 **gary debug** - Debug menu for gary.
 
 Everything else is secret, discover it or read the code.
