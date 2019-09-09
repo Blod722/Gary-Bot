@@ -61,7 +61,7 @@ var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
-const ooftastic = /^oof\b|\s?[^a-z]+\boof[^a-z]?\b|^oof[^a-z]$/i;
+const ooftastic = /^oof\b|^o+oof\b|\s?[^a-z]+\boof[^a-z]?\b|\s?[^a-z]o+oof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
 
 //Command hook
@@ -116,9 +116,9 @@ bot.on ("message", (message) => {
         if (msg.startsWith(prefix + ' debug')) {
         debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 8/29/2019")
+            .setDescription ("Last Update - 9/9/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.5", "Released 8/29/2019")
+            .addField ("Version - 1.2.6", "Released 9/9/2019")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
