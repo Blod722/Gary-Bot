@@ -111,7 +111,7 @@ var msghr = msgdate.getHours();
             message.channel.send(SResponse)};
     
     if ( (msg.startsWith(prefix + ' debug') &&
-       (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name))) ){
+       (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("Last Update - 9/16/2019")
