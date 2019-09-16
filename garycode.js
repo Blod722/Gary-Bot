@@ -173,7 +173,7 @@ var msghr = msgdate.getHours();
         const mulleyemoji = message.guild.emojis.find(emoji => emoji.name === 'mulley');
             message.react(mulleyemoji)};
     
-    if ((morningmsg.includes(message.content)) && (msghr >= 12))
+    if ((morningmsg.includes(msg)) && (msghr >= 12))
 	    {const redcardemoji = message.guild.emojis.find(emoji => emoji.name === 'redcard');
         message.react(redcardemoji)};    
 
