@@ -1,6 +1,7 @@
 //Pulling Discord.js Library and Starting Bot from Token
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
+const fetch = require('node-fetch');
 const {discord_token} = require('./config.json');
 
 const token = discord_token;
@@ -69,6 +70,9 @@ var msghr = msgdate.getHours();
     
 //Any command starting with 'msg.' makes the command case-insensitive.
     msg = message.content.toLowerCase();
+	
+//Parse the zipCode from a message by starting right after "weather[space]"
+let zipCode = message.content.split("weather ")[1];
     
 //Good morning & Goodnight commands
 //    if (msg.includes('morning'))
@@ -114,9 +118,9 @@ var msghr = msgdate.getHours();
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 9/16/2019")
+            .setDescription ("Last Update - 9/17/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.2.8", "Released 9/16/2019")
+            .addField ("Version - 1.3", "Released 9/17/2019\nAdded: Gary Weather v1.0")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -185,7 +189,103 @@ var msghr = msgdate.getHours();
     if (msg.includes("name")) {
         if (msg.includes("gary"))
             message.reply("Cause that's what my name is.")};
-
+//WEATHER FUNCTION
+if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
+	if (zipCode === undefined || zipCode.length !=5 || parseInt(zipCode) === NaN)
+		{
+			message.channel.send("`Invalid Zip Code. Please follow the format: gary weather <#####>`")
+				.catch(console.error);
+					return;
+		}
+	else
+		{
+		fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&units=imperial&APPID=2b19beebbb6cec5207fee68549772e4f`)
+			.then
+				(response =>
+					{
+						return response.json();
+					}
+				)
+		.then
+			(parsedWeather =>
+				{
+					if (parsedWeather.cod === '404')
+						{
+							message.channel.send("`This zip code does not exist or there is no information available.`");
+						}
+					else
+						{
+							var sunrisedate = new Date(parsedWeather.sys.sunrise*1000);
+							//var srdd = String(sunrisedate.getDate()).padStart(2, '0');
+							//var srmm = String(sunrisedate.getMonth() + 1).padStart(2, '0'); //January is 0!
+							//var sryyyy = sunrisedate.getFullYear();
+							var srhr = sunrisedate.getHours();
+							var srampm = srhr >= 12 ? 'pm' : 'am';
+							srhr = srhr % 12;
+							srhr = srhr ? srhr : 12;
+							var srmin = sunrisedate.getMinutes();
+							//var srsec = sunrisedate.getSeconds();
+							var sunrisedatetime = /*srmm + '/' + srdd + '/' + sryyyy + " " + */srhr + ":" + srmin +srampm/* + ":" + srsec*/;
+							var sunsetdate = new Date(parsedWeather.sys.sunset*1000);
+							//var ssdd = String(sunsetdate.getDate()).padStart(2, '0');
+							//var ssmm = String(sunsetdate.getMonth() + 1).padStart(2, '0'); //January is 0!
+							//var ssyyyy = sunsetdate.getFullYear();
+							var sshr = sunsetdate.getHours();
+							var ssampm = sshr >= 12 ? 'pm' : 'am';
+							sshr = sshr % 12;
+							sshr = sshr ? sshr : 12;
+							var ssmin = sunsetdate.getMinutes();
+							//var sssec = sunsetdate.getSeconds();
+							var sunsetdatetime = /*ssmm + '/' + ssdd + '/' + ssyyyy + " " + */sshr + ":" + ssmin +ssampm/* ":" + sssec;*/;
+							var icon1 = 'http://openweathermap.org/img/wn/';
+							var icon2 = parsedWeather.weather[0].icon;
+							var icon3 = '@2x.png';
+							var weathericon = icon1 + icon2 + icon3;
+				const embed = {
+				  "title": "Weather",
+				  "description": "Conditions: **"+parsedWeather.weather[0].main+"**",
+				  "color": 16729856,
+				  "footer": {
+				    "icon_url": "https://www.pngrepo.com/png/40154/170/sunset.png",
+				    "text": "Describe The Atmosphere"
+				  },
+				  "thumbnail": {
+				    "url": weathericon.toString()
+				  },								    
+				  "image": {
+				    "url": "https://i.imgur.com/P0OMKg2.png"
+				  },
+				  "author": {
+				    "name": parsedWeather.name+", "+parsedWeather.sys.country+" ("+zipCode+")",
+				    "icon_url": "https://i.imgur.com/P0OMKg2.png"
+				  },
+				  "fields": [
+				    {
+				      "name": "Temperature",
+				      "value": "Current: **"+Math.round(parsedWeather.main.temp)+"° F**\nHigh: "+Math.round(parsedWeather.main.temp_max)+"° F\nLow: "+Math.round(parsedWeather.main.temp_min)+"° F\nHumidity: "+parsedWeather.main.humidity+"%",
+				      "inline": true
+				    },
+				    {
+				      "name": "Wind",
+				      "value": "Speed: **"+Math.round(parsedWeather.wind.speed)+" mph**",
+				      "inline": true
+				    },
+				    {
+				      "name": "Cloud Cover",
+				      "value": "Cloudiness: **"+parsedWeather.clouds.all+"%**",
+				      "inline": true
+				    },									    									    
+				    {
+				      "name": "Sunrise | Sunset",
+				      "value": sunrisedatetime+" **|** "+sunsetdatetime,
+				      "inline": true
+				    }
+					  ]
+					};
+				message.channel.send({ embed });}
+				}
+			);
+		}
 });
 
 bot.login(token)
