@@ -1,22 +1,21 @@
 //Pulling Discord.js Library and Starting Bot from Token
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
+const fetch = require('node-fetch');
 const {discord_token} = require('./config.json');
 
 const token = discord_token;
 
 //Bot Wide Variables & Constants
-const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2019 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Richey save another ball.','Koch get cut.','Damet attempt to recover the team.','Berding as he makes a press statement.','Whoever this new Blond Haired guy play.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.'];
+const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Richey save another ball.','Koch get cut.','Damet attempt to recover the team.','Berding as he makes a press statement.','Whoever this new Blond Haired guy play.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.'];
 var GameDayDates = ["05/25/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
 
-/*
 //This next part is specifically code to check what day it is.
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 today = mm + '/' + dd + '/' + yyyy;
-*/
 
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
@@ -60,17 +59,26 @@ var Starters = ['If you could sign any soccer player you wanted for FC Cincinnat
 var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","¿Cómo te va?","Hello","Hey, and before you ask. It's my name because thats what it is.","That's my name, don't wear it out!","Arrgg me boy, that's who me name is!"];
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
+const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
+const ooftastic = /^oof\b|^o+oof\b|\s?[^a-z]+\boof[^a-z]?\b|\s?[^a-z]o+oof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
 
 //Command hook
 bot.on ("message", (message) => {
+    
+//Check for the current hour on each message
+var msgdate = new Date()
+var msghr = msgdate.getHours();
     
 //Makes sure gary bot doesn't talk to himself.
     if (message.author.bot) return;
     
 //Any command starting with 'msg.' makes the command case-insensitive.
     msg = message.content.toLowerCase();
-    
+	
+//Parse the zipCode from a message by starting right after "weather[space]"
+let zipCode = message.content.split("weather ")[1];
+  
 //Prefixed commands
     if (msg.startsWith(prefix + ' github'))
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
@@ -120,19 +128,19 @@ bot.on ("message", (message) => {
     const yellowemoji = message.guild.emojis.find(emoji => emoji.name === 'yellowcard');
         message.react(yellowemoji)};
 
-    if (message.content.toLowerCase() == "ope") {
+    if (operoni.test(message.content.toLowerCase())) {
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
-            message.react(opeemoji)};
-
+            message.react(opeemoji)};   
+    
     if (message.content.toLowerCase() == "oi") {
         const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
             message.react(oiemoji)};
-
-    if (message.content.toLowerCase() == "oof") {
+    
+    if (ooftastic.test(message.content.toLowerCase())) {
         const oofemoji = message.guild.emojis.find(emoji => emoji.name === 'oofgif');
             message.react(oofemoji)};
-  
-   if (bonerpatrol.test(message.content.toLowerCase())) {
+    
+    if (bonerpatrol.test(message.content.toLowerCase())) {
         const boneemoji = message.guild.emojis.find(emoji => emoji.name === 'bone');
             message.react(boneemoji)};
     
@@ -143,12 +151,112 @@ bot.on ("message", (message) => {
     if (msg.includes("bmulley")) {
         const mulleyemoji = message.guild.emojis.find(emoji => emoji.name === 'mulley');
             message.react(mulleyemoji)};
+    
+    if ((morningmsg.includes(msg)) && (msghr >= 12))
+	    {const redcardemoji = message.guild.emojis.find(emoji => emoji.name === 'redcard');
+        message.react(redcardemoji)};    
 
 // When someone asks why his name is gary it responds with 'cause thats what my name is'
     if (msg.includes("name")) {
         if (msg.includes("gary"))
             message.reply("Cause that's what my name is.")};
-
+//WEATHER FUNCTION
+if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
+	if (zipCode === undefined || zipCode.length !=5 || parseInt(zipCode) === NaN)
+		{
+			message.channel.send("`Invalid Zip Code. Please follow the format: gary weather <#####>`")
+				.catch(console.error);
+					return;
+		}
+	else
+		{
+		fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&units=imperial&APPID=2b19beebbb6cec5207fee68549772e4f`)
+			.then
+				(response =>
+					{
+						return response.json();
+					}
+				)
+		.then
+			(parsedWeather =>
+				{
+					if (parsedWeather.cod === '404')
+						{
+							message.channel.send("`This zip code does not exist or there is no information available.`");
+						}
+					else
+						{
+							var sunrisedate = new Date(parsedWeather.sys.sunrise*1000);
+							//var srdd = String(sunrisedate.getDate()).padStart(2, '0');
+							//var srmm = String(sunrisedate.getMonth() + 1).padStart(2, '0'); //January is 0!
+							//var sryyyy = sunrisedate.getFullYear();
+							var srhr = sunrisedate.getHours();
+							var srampm = srhr >= 12 ? 'pm' : 'am';
+							srhr = srhr % 12;
+							srhr = srhr ? srhr : 12;
+							var srmin = ((sunrisedate.getMinutes()<10?'0':'')+sunrisedate.getMinutes());
+							//var srsec = sunrisedate.getSeconds();
+							var sunrisedatetime = /*srmm + '/' + srdd + '/' + sryyyy + " " + */srhr + ":" + srmin +srampm/* + ":" + srsec*/;
+							var sunsetdate = new Date(parsedWeather.sys.sunset*1000);
+							//var ssdd = String(sunsetdate.getDate()).padStart(2, '0');
+							//var ssmm = String(sunsetdate.getMonth() + 1).padStart(2, '0'); //January is 0!
+							//var ssyyyy = sunsetdate.getFullYear();
+							var sshr = sunsetdate.getHours();
+							var ssampm = sshr >= 12 ? 'pm' : 'am';
+							sshr = sshr % 12;
+							sshr = sshr ? sshr : 12;
+							var ssmin = ((sunsetdate.getMinutes()<10?'0':'')+sunsetdate.getMinutes());
+							//var sssec = sunsetdate.getSeconds();
+							var sunsetdatetime = /*ssmm + '/' + ssdd + '/' + ssyyyy + " " + */sshr + ":" + ssmin +ssampm/* ":" + sssec;*/;
+							var icon1 = 'http://openweathermap.org/img/wn/';
+							var icon2 = parsedWeather.weather[0].icon;
+							var icon3 = '@2x.png';
+							var weathericon = icon1 + icon2 + icon3;
+				const embed = {
+				  "title": "Weather",
+				  "description": "Conditions: **"+parsedWeather.weather[0].main+"**",
+				  "color": 16729856,
+				  "footer": {
+				    "icon_url": "https://www.pngrepo.com/png/40154/170/sunset.png",
+				    "text": "Describe The Atmosphere"
+				  },
+				  "thumbnail": {
+				    "url": weathericon.toString()
+				  },								    
+				  "image": {
+				    "url": "https://i.imgur.com/P0OMKg2.png"
+				  },
+				  "author": {
+				    "name": parsedWeather.name+", "+parsedWeather.sys.country+" ("+zipCode+")",
+				    "icon_url": "https://i.imgur.com/P0OMKg2.png"
+				  },
+				  "fields": [
+				    {
+				      "name": "Temperature",
+				      "value": "Current: **"+Math.round(parsedWeather.main.temp)+"° F**\nHigh: "+Math.round(parsedWeather.main.temp_max)+"° F\nLow: "+Math.round(parsedWeather.main.temp_min)+"° F\nHumidity: "+parsedWeather.main.humidity+"%",
+				      "inline": true
+				    },
+				    {
+				      "name": "Wind",
+				      "value": "Speed: **"+Math.round(parsedWeather.wind.speed)+" mph**",
+				      "inline": true
+				    },
+				    {
+				      "name": "Cloud Cover",
+				      "value": "Cloudiness: **"+parsedWeather.clouds.all+"%**",
+				      "inline": true
+				    },									    									    
+				    {
+				      "name": "Sunrise | Sunset",
+				      "value": sunrisedatetime+" **|** "+sunsetdatetime,
+				      "inline": true
+				    }
+					  ]
+					};
+				message.channel.send({ embed });}
+				}
+			);
+		}
 });
 
 bot.login(token)
