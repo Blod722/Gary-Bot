@@ -20,6 +20,8 @@ Gary Bot is ran on Ubuntu 18.04.2 LTS based VM graciously hosted for free by Bmu
 
 **gary debug** - Debug menu for gary.
 
+**gary weather ** - shows the weather for a specific zipcode
+
 Everything else is secret, discover it or read the code.
 
 # Licensing
