@@ -120,7 +120,7 @@ let zipCode = message.content.split("weather ")[1];
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("Last Update - 9/17/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3", "Released 9/17/2019\nAdded: Gary Weather v1.0")
+            .addField ("Version - 1.3.0.1", "Released 9/17/2019\nAdded: Gary Weather v1.0")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -223,7 +223,7 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 							var srampm = srhr >= 12 ? 'pm' : 'am';
 							srhr = srhr % 12;
 							srhr = srhr ? srhr : 12;
-							var srmin = sunrisedate.getMinutes();
+							var srmin = ((sunrisedate.getMinutes()<10?'0':'')+sunrisedate.getMinutes());
 							//var srsec = sunrisedate.getSeconds();
 							var sunrisedatetime = /*srmm + '/' + srdd + '/' + sryyyy + " " + */srhr + ":" + srmin +srampm/* + ":" + srsec*/;
 							var sunsetdate = new Date(parsedWeather.sys.sunset*1000);
@@ -234,7 +234,7 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 							var ssampm = sshr >= 12 ? 'pm' : 'am';
 							sshr = sshr % 12;
 							sshr = sshr ? sshr : 12;
-							var ssmin = sunsetdate.getMinutes();
+							var ssmin = ((sunsetdate.getMinutes()<10?'0':'')+sunsetdate.getMinutes());
 							//var sssec = sunsetdate.getSeconds();
 							var sunsetdatetime = /*ssmm + '/' + ssdd + '/' + ssyyyy + " " + */sshr + ":" + ssmin +ssampm/* ":" + sssec;*/;
 							var icon1 = 'http://openweathermap.org/img/wn/';
