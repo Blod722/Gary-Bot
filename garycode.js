@@ -118,9 +118,9 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 9/17/2019")
+            .setDescription ("Last Update - 9/20/2019")
             .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3.0.1", "Released 9/17/2019\nAdded: Gary Weather v1.0")
+            .addField ("Version - 1.3.0.2"\nAdded: Lost_Link reaction")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -180,6 +180,15 @@ let zipCode = message.content.split("weather ")[1];
     if ((morningmsg.includes(msg)) && (msghr >= 12))
 	    {const redcardemoji = message.guild.emojis.find(emoji => emoji.name === 'redcard');
         message.react(redcardemoji)};    
+
+//if user 'Lost' posts a link or attachment, react with lost_link emoji	
+	if(message.author.id == "100401933273038848")
+		if (message.attachments.size > 0 || message.embeds.length > 0)
+		{
+			const lostlinkemoji = message.guild.emojis.find(emoji => emoji.name === 'lost_link');
+		    message.react(lostlinkemoji)
+	    };
+
 
 // anytime someone says upgary it responds with the upgary photo.
 //    if (msg.startsWith('upgary'))
