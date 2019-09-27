@@ -97,9 +97,9 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 9/17/2019")
+            .setDescription ("Last Update - 9/27/2019")
             .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3.0.1", "Released 9/17/2019\nAdded: Gary Weather v1.0")
+            .addField ("Version - 1.3.1", "Released 9/17/2019\nAdded: Lost_Link reaction.")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
