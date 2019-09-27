@@ -9,8 +9,13 @@ const token = discord_token;
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Richey save another ball.','Koch get cut.','Damet attempt to recover the team.','Berding as he makes a press statement.','Whoever this new Blond Haired guy play.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.'];
 var GameDayDates = ["05/25/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
-//messages that users will send to say "good morning"
-var morningmsg = ["morning","morning.","morning!","morn","mornin","mornin'","mourning","mourning.","morning all","morning all.","morning all!","morning?","good morning","good morning.","it is morning","it's morning"]
+
+//This next part is specifically code to check what day it is.
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = mm + '/' + dd + '/' + yyyy;
 
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
@@ -37,7 +42,7 @@ today = mm + '/' + dd + '/' + yyyy;
         var GDWResponse = GDWelcome[Math.floor(Math.random() * (GDWelcome.length -1 ) + 1)]
             member.guild.channels.get('456926862405271554').send(GDWResponse)}
     else {
-    var Welcome = ["Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical! " + member + ", Is now now playing for **/r/FCCincinnati**!", "This just in, " + member + " was just traded to **/r/FCCincinnati**!"]
+    var Welcome = ["Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!", "It's offical! " + member + ", Is now playing for **/r/FCCincinnati**!", "This just in, " + member + " was just traded to **/r/FCCincinnati**!"]
     var WResponse = Welcome[Math.floor(Math.random() * (Welcome.length -1 ) + 1)]
     member.guild.channels.get('456926862405271554').send(WResponse)}});
 
@@ -51,12 +56,12 @@ bot.on ("guildMemberRemove", member => {
 // Message Constants and Varibles
 const GaryMsg = ['hello gary','howdy gary','hey gary','hola gary','hi gary']
 var Starters = ['If you could sign any soccer player you wanted for FC Cincinnati, who would you sign?','If you had the choice, what previous FC Cincinnati Player would you sign?','What does FC Cincinnati need most?', "What's the best board game of all time, Why?", "What's the best video game of all time, Why?", "What's your favorite way to waste time?", "What's that one awkward high school experience?", "Other than KLR, what podcasts are you listening to (if any)?", "What's the best flavor of seed?", "So, what are you avoiding by talking to us on Discord?", "What did you eat for your last meal, was it good?", "What's the best gift you've ever gotten?", "All of a sudden, you are the new coach of the FC Cincinnati, what are you gonna do to make us MLS Cup Champions?", "One FC Cincinnati player has to go, who is it?", "You're given a million dollars, other than pay off debt, what are you gonna buy?", "Suddenly you win the lottery! What do you do with you're new found fortune?", "Xbox, Playstation, and Nintendo. Who's the best and why? (PC Can't be your answer :P)", "Favorite food, why?", "Favorite drink, why?", "Favorite Alcoholic drink, why?", "Favorite non-alcoholic drink, why?", "Favorite chain resturant, why?", "Favorite local resturant, why?", "If you could re-live one expience in your lifetime, what would it be?", "What's your second favorite for an MLS team? (Since FCC is your first :) )", "Suddenly you can make one thing legal, without getting too !politics, what would it be?", "Suddenly you can make one thing illegal, without getting too !politics, what would it be?", "What's on your mind?", "What are you up to? Other than Discord.", "You have enough money to buy any car you want, what's your choice?", "What's your favorite season, why?", "What's your favorite song, why?", "You get to spend an afternoon with 1 famous person, who do you choose? What do you ask them?", "What's one major goal in your life?", "You are given the oppertunity to travel anywhere in the world, where do you go?", "One day, you and your boss swap positions (You're the boss of him now), what's your next move?", "What's the 2nd best city in the world (Can't say Cincy since it's your favorite)?", "You get to go to (or head back to) college completely free, What major do you take?", "One MLS team ceases to exist because you want it to, Other than Columbus Crew, who would it be?", "Okay for real, why is his name Gary?", "Do you read reviews about a movie before deciding whether to watch it or not?", "What would you do differently if you could relive the past year?", "What is the best thing about school/work?", "Where is your favorite place to shop? Why?", "What is your favorite pizza topping? (Pineapple is the incorrect answer)", "What is your favorite candy?", "If you could choose your last meal, what would it be?", "If you could meet anybody in history, past or present, who would it be?", "What did you have for lunch yesterday?", "If you could give one piece of advice to the whole world, what would it be?", "Would you prefer to live in an urban area or a rural area?", "At what age would you consider someone to be old?", "What is something new that you've learned in the past week?", "If you could acquire any skill, what would you choose?", "What was the biggest life change you've gone through?", "Do you prefer cats or dogs?", "What is the worst job you ever had?", "What accomplishment are you most proud of?", "What is your favorite party game (or board game)?", "Have you ever been in any YouTube videos?"]
-var Gary = ["Waddup?","What's Good?","Hola","Howdy.","Whats good in the hood?","¿Cómo te va?","Hello","Hey, and before you ask. It's my name because thats what it is.","That's my name, don't wear it out!","Arrgg me boy, that's who me name is!"];
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
 const ooftastic = /^oof\b|^o+oof\b|\s?[^a-z]+\boof[^a-z]?\b|\s?[^a-z]o+oof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
+var morningmsg = ["morning","morning.","morning!","morn","mornin","mornin'","mourning","mourning.","morning all","morning all.","morning all!","morning?","good morning","good morning.","it is morning","it's morning"]
 
 //Command hook
 bot.on ("message", (message) => {
@@ -73,33 +78,7 @@ var msghr = msgdate.getHours();
 	
 //Parse the zipCode from a message by starting right after "weather[space]"
 let zipCode = message.content.split("weather ")[1];
-    
-//Good morning & Goodnight commands
-//    if (msg.includes('morning'))
-//        if (msg.includes("gary")) {
-//            var GMResponse = GaryMorning[Math.floor(Math.random() * (GaryMorning.length -1 ) + 1)]
-//                message.channel.send(message.author +', '+ GMResponse)};
-
-//    if (msg.includes('hello'))
-//        if (msg.includes("gary")) {
-//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-//                message.channel.send(message.author +', '+ GResponse)};
-
-//    if (msg.includes('howdy')) {
-//        if (msg.includes("gary")) {
-//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-//                message.channel.send(message.author +', '+ GResponse)}};
-
-//    if (msg.includes('hey')) {
-//        if (msg.includes("gary")) {
-//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-//                message.channel.send(message.author +', '+ GResponse)}};
-
-//    if (msg.includes('hola')) {
-//        if (msg.includes("gary")) {
-//            var GResponse = Gary[Math.floor(Math.random() * (Gary.length -1 ) + 1)]
-//                message.channel.send(message.author +', '+ GResponse)}};
-    
+  
 //Prefixed commands
     if (msg.startsWith(prefix + ' github'))
         message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
@@ -118,9 +97,9 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 9/20/2019")
-            .setFooter("Created by Bmulley#4379 and Blod#6563 for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3.0.2","Added: Lost_Link reaction")
+            .setDescription ("Last Update - 9/27/2019")
+            .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
+            .addField ("Version - 1.3.1", "Released 9/17/2019\nAdded: Lost_Link reaction.")
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
@@ -141,10 +120,6 @@ let zipCode = message.content.split("weather ")[1];
 //this should respond to anyone that says 'koch bot'
     if (msg.includes("koch bot"))
         message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary');
-    
-//this should respond to anyone that says 'endgame'
-    if (msg.includes('endgame'))
-        message.channel.send('At the very end, Thanos finally wins, he snaps his fingers again and head coach Alan Koch is fired.');
     
 //Emoting commands
     if (msg.includes("guido")){
@@ -188,12 +163,6 @@ let zipCode = message.content.split("weather ")[1];
 			const lostlinkemoji = message.guild.emojis.find(emoji => emoji.name === 'lost_link');
 		    message.react(lostlinkemoji)
 	    };
-
-
-// anytime someone says upgary it responds with the upgary photo.
-//    if (msg.startsWith('upgary'))
-//    (message.channel.send("", {file: "/home/blod/Gary/images/Upgary.png"}));
-
 // When someone asks why his name is gary it responds with 'cause thats what my name is'
     if (msg.includes("name")) {
         if (msg.includes("gary"))
