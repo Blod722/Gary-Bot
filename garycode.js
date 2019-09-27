@@ -156,6 +156,13 @@ let zipCode = message.content.split("weather ")[1];
 	    {const redcardemoji = message.guild.emojis.find(emoji => emoji.name === 'redcard');
         message.react(redcardemoji)};    
 
+//if user 'Lost' posts a link or attachment, react with lost_link emoji	
+	if(message.author.id == "100401933273038848")
+		if (message.attachments.size > 0 || message.embeds.length > 0)
+		{
+			const lostlinkemoji = message.guild.emojis.find(emoji => emoji.name === 'lost_link');
+		    message.react(lostlinkemoji)
+	    };
 // When someone asks why his name is gary it responds with 'cause thats what my name is'
     if (msg.includes("name")) {
         if (msg.includes("gary"))
