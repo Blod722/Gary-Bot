@@ -170,6 +170,7 @@ let zipCode = message.content.split("weather ")[1];
 	
 // Gary help command 
 	if(msg.startsWith(prefix + ' help'))
+	{
 		message.channel.send('Gary github --- The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
 
        		message.channel.send('Gary cincy chants/cincychants-- Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
