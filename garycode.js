@@ -97,10 +97,10 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 9/27/2019")
+            .setDescription ("Last Update - 11/19/2019")
             .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
             .addField ("Version - 1.3.2", "Released 11/19/2019\nAdded: Time in Debug Menu")
-	    .addField ("Current Time", toTimeString(msgdate))
+	    .addField ("Current Time", toTimeString(msgdate), true)
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
