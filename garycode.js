@@ -99,7 +99,8 @@ let zipCode = message.content.split("weather ")[1];
             .setAuthor("Gary Bot Debug Menu")
             .setDescription ("Last Update - 9/27/2019")
             .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3.1", "Released 9/17/2019\nAdded: Lost_Link reaction.")
+            .addField ("Version - 1.3.2", "Released 11/19/2019\nAdded: Time in Debug Menu")
+	    .addField ("Current Time", toTimeString(msgdate))
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
