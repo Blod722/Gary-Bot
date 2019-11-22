@@ -69,6 +69,17 @@ bot.on ("message", (message) => {
 //Check for the current hour on each message
 var msgdate = new Date()
 var msghr = msgdate.getHours();
+
+//Builds Datetime string for Debug Embed
+var garytime = new Date()
+var garydd = String(garytime.getDate()).padStart(2, '0');
+var garymm = String(garytime.getMonth() + 1).padStart(2, '0'); //January is 0!
+var garyyyyy = garytime.getFullYear();
+var garyhr = garytime.getHours();
+var garymsghr = garytime.getHours();
+var garymin = ((garytime.getMinutes()<10?'0':'')+garytime.getMinutes());
+var garysec = garytime.getSeconds();
+garytime = mm + '/' + dd + '/' + yyyy + " " + hr + ":" + min + ":" + sec;
     
 //Makes sure gary bot doesn't talk to himself.
     if (message.author.bot) return;
@@ -97,10 +108,10 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 11/19/2019")
+	    .setDescription ("Last Update - 11/22/2019")
             .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
-            .addField ("Version - 1.3.2", "Released 11/19/2019\nAdded: Time in Debug Menu")
-	    .addField ("Current Time", toTimeString(msgdate), true)
+            .addField ("Version - 1.3.2", "Added: Time in Debug Menu")
+	    .addField ("Current Time", garytime)
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
         message.channel.send(debug)};
