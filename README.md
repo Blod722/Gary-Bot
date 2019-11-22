@@ -30,7 +30,7 @@ Although the bot is Open Source, I do request that you don't recopy the code in 
 # Credits
 **Blod#6563** - Coding.
 
-**Bmulley#4379** - Hosting and coding the bot.
+**Bmulley#4379** - Hosting and coding the bot, as well as generally being awesome.
 
 **BzzLghtyr#0001** - Memes and Gary Weather, along with other important code.
 
