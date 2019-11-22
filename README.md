@@ -28,8 +28,12 @@ Everything else is secret, discover it or read the code.
 Although the bot is Open Source, I do request that you don't recopy the code in its entirety. I have no issue with you using bits and pieces for your own projects.
 
 # Credits
-Blod#6563 - Coding.
-Bmulley#4379 - Hosting and coding the bot.
-BzzLghtyr#0001 - Memes and Gary Weather, along with other important code.
-pw8164#8056 - Coding
-Mainframe#4083 - Coding
+**Blod#6563** - Coding.
+
+**Bmulley#4379** - Hosting and coding the bot.
+
+**BzzLghtyr#0001** - Memes and Gary Weather, along with other important code.
+
+**pw8164#8056** - Coding
+
+**Mainframe#4083** - Coding
