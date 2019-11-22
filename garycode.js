@@ -114,7 +114,7 @@ let zipCode = message.content.split("weather ")[1];
 	    .addField ("Current Time", garytime)
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
-        message.channel.send({embed:debug})};
+        message.channel.send(debug)};
 	
 //When someone says 'Damn It' it reacts in letters saying 'Damet'
     if (msg.includes('damn it'))
