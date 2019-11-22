@@ -1,13 +1,13 @@
 # Gary Bot
 "Because that's what his name is."
 
-Created with love by Blod#6563, Bmulley#4379, BzzLghtyr#0001, pw8164#8056, and hensonb3#2843 for /r/FCCincinnati's Discord https://discord.gg/Bt6ytSQ
+Created with love for /r/FCCincinnati's Discord https://discord.gg/Bt6ytSQ
 
 # What Is Gary Bot?
 Gary bot is a meme-y and functional bot to be used for /r/FCCincinnati's Discord server. The intended use is to be a replacement for an old bot that is no longer hosted, as well as a easily customizable bot that can add or remove code as needed by the Discord. Written in JavaScript using Discord.JS, Gary Bot is the first fully functional code that I (Blod) has written and been used publicly. A lot of help as well as server hosting was done by Bmulley.
 
 # How Does Gary Bot Run?
-Gary Bot is ran on Ubuntu based VM graciously hosted for free by Bmulley. The server has regularly scheduled git pulls to determine if the master branch has changed, and if so pulls down and applies those changes.  It utilizes pm2 for service uptime and monitoring, to ensure that the service will restart if it dies for any reason.
+Gary Bot is ran on an Ubuntu based VM graciously hosted for free by Bmulley. The server has regularly scheduled git pulls to determine if the master branch has changed, and if so pulls down and applies those changes.  It utilizes pm2 for service uptime and monitoring, to ensure that the service will restart if it dies for any reason.
 
 # Current Commands & Functions
 **gary github** - Brings up an info box about this github page, as well as a link.
@@ -26,3 +26,10 @@ Everything else is secret, discover it or read the code.
 
 # Licensing
 Although the bot is Open Source, I do request that you don't recopy the code in its entirety. I have no issue with you using bits and pieces for your own projects.
+
+# Credits
+Blod#6563 - Coding.
+Bmulley#4379 - Hosting and coding the bot.
+BzzLghtyr#0001 - Memes and Gary Weather, along with other important code.
+pw8164#8056 - Coding
+Mainframe#4083 - Coding
