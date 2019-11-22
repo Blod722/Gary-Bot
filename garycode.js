@@ -8,7 +8,7 @@ const token = discord_token;
 
 //Bot Wide Variables & Constants
 //const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio'];
-const Activities = ['v1.3.2 Nov 11 2019'];
+const Activities = ['v1.3.2 Nov 11 2019','v1.3.2 Nov 11 2019'];
 var GameDayDates = ["05/25/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
 
 //This next part is specifically code to check what day it is.
@@ -80,7 +80,7 @@ var garyhr = garytime.getHours();
 var garymsghr = garytime.getHours();
 var garymin = ((garytime.getMinutes()<10?'0':'')+garytime.getMinutes());
 var garysec = garytime.getSeconds();
-garytime = mm + '/' + dd + '/' + yyyy + " " + hr + ":" + min + ":" + sec;
+garytime = garymm + '/' + garydd + '/' + garyyyyy + " " + garyhr + ":" + garymin + ":" + garysec;
     
 //Makes sure gary bot doesn't talk to himself.
     if (message.author.bot) return;
@@ -115,7 +115,7 @@ let zipCode = message.content.split("weather ")[1];
 	    .addField ("Current Time", garytime)
             .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
             .setColor ("F26522");
-        message.channel.send(debug)};
+        message.channel.send({embed:debug})};
 	
 //When someone says 'Damn It' it reacts in letters saying 'Damet'
     if (msg.includes('damn it'))
