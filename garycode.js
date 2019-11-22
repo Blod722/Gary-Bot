@@ -26,8 +26,8 @@ today = mm + '/' + dd + '/' + yyyy;
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
     console.log('Bot Ready!');
-    var garybottestchannel = client.channels.get('577326593639317525');
-    const garydabemoji = client.emojis.find(emoji => emoji.name === "garydab");
+    var garybottestchannel = bot.channels.get('577326593639317525');
+    const garydabemoji = bot.emojis.find(emoji => emoji.name === "garydab");
 
     garybottestchannel.sendMessage(`${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}`+"\n__**"+garyversion+" Patch Notes**__\n"+garyversionnote);
 	
