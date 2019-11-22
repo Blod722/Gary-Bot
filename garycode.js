@@ -7,7 +7,7 @@ const {discord_token} = require('./config.json');
 const token = discord_token;
 
 //Bot Wide Variables & Constants
-const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Richey save another ball.','Koch get cut.','Damet attempt to recover the team.','Berding as he makes a press statement.','Whoever this new Blond Haired guy play.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.'];
+const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio'];
 var GameDayDates = ["05/25/2019", "06/01/2019", "06/06/2019", "06/22/2019", "06/29/2019", "07/06/2019", "07/13/2019", "07/18/2019", "07/21/2019", "07/27/2019", "08/03/2019", "08/10/2019", "08/17/2019", "08/25/2019", "08/31/2019", "09/07/2019", "09/14/2019", "09/18/2019", "09/21/2019", "09/29/2019", "10/06/2019"]
 
 //This next part is specifically code to check what day it is.
@@ -108,7 +108,7 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-            .setDescription ("Last Update - 11/19/2019")
+	    .setDescription ("Last Update - 11/22/2019")
             .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
             .addField ("Version - 1.3.2", "Added: Time in Debug Menu")
 	    .addField ("Current Time", garytime)
@@ -179,16 +179,7 @@ let zipCode = message.content.split("weather ")[1];
     if (msg.includes("name")) {
         if (msg.includes("gary"))
             message.reply("Cause that's what my name is.")};
-	
-// Gary help command 
-	if(msg.startsWith(prefix + ' help'))
-	{
-		message.channel.send('Gary github --- The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**');
 
-       		message.channel.send('Gary cincy chants/cincychants-- Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
-
-        	message.channel.send('Gary weather -- tells the weather');
-	};
 //WEATHER FUNCTION
 if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 	if (zipCode === undefined || zipCode.length !=5 || parseInt(zipCode) === NaN)
