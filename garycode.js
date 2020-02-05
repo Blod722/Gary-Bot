@@ -8,8 +8,9 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.4.1"
-const garyversionnote	=	"Asked Gary nicely if he auto-updates the way he's supposed to."
+const garyversion	=	"1.4.1.1 (?)"
+const garyversionnote	=	"Update game day dates, if wrong or becomes wrong pls change."
+const garylastupdate    =       "2/4/2020"
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio','Fiddle win another eMLS Tournament.','The Post become a reputable news source.'];
@@ -81,7 +82,7 @@ bot.on ("message", (message) => {
 var msgdate = new Date()
 var msghr = msgdate.getHours();
 
-//Builds Datetime string for Debug Embed
+//Builds Datetime string forF Debug Embed
 var garytime = new Date()
 var garydd = String(garytime.getDate()).padStart(2, '0');
 var garymm = String(garytime.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -119,7 +120,7 @@ let zipCode = message.content.split("weather ")[1];
        (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
             debug = new Discord.RichEmbed ()
             .setAuthor("Gary Bot Debug Menu")
-	    .setDescription ("Last Update - 11/22/2019")
+	    .setDescription ("Last Update - ", garylastupdate)
             .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
             .addField (garyversion, garyversionnote)
 	    .addField ("Current Time", garytime)
