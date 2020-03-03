@@ -113,37 +113,51 @@ let zipCode = message.content.split("weather ")[1];
         message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
 
     if (msg.startsWith(prefix + ' topic')) {
-        var SResponse = Starters[Math.floor(Math.random() * (Starters.length -1 ) + 1)]
-            message.channel.send(SResponse)};
-    
-    if ( (msg.startsWith(prefix + ' debug') &&
-       (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
-            debug = new Discord.RichEmbed ()
-            .setAuthor("Gary Bot Debug Menu")
-	    .setDescription ("Last Update - ", garylastupdate)
-            .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
-            .addField (garyversion, garyversionnote)
-	    .addField ("Current Time", garytime)
-            .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
-            .setColor ("F26522");
-        message.channel.send({embed:debug})};
-	
+if ( (msg.startsWith(prefix + ' github') &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+		message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**')};
+
+if ( (msg.startsWith(prefix + ' cincy chants') &&
+(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+	message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!')};
+if ( (msg.startsWith(prefix + ' cincychants') &&
+	message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name)))){
+		message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!')};
+if ( (msg.startsWith(prefix + ' topic') &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+	var SResponse = Starters[Math.floor(Math.random() * (Starters.length -1 ) + 1)]
+		message.channel.send(SResponse)};
+
+if ( (msg.startsWith(prefix + ' debug') &&
+(message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
+	debug = new Discord.RichEmbed ()
+	.setAuthor("Gary Bot Debug Menu")
+.setDescription ("Last Update - ", garylastupdate)
+	.setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
+	.addField (garyversion, garyversionnote)
+.addField ("Current Time", garytime)
+	.setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
+	.setColor ("F26522");
+		message.channel.send({embed:debug})};
+
 //When someone says 'Damn It' it reacts in letters saying 'Damet'
-    if (msg.includes('damn it'))
-        message.react("🇩")
-            .then(() => message.react("🇦")
-            .then(() => message.react("🇲")
-            .then(() => message.react("🇪")
-            .then(() => message.react("🇹")
-        )))); 
-    
+if (msg.includes('damn it'))
+message.react("🇩")
+	.then(() => message.react("🇦")
+	.then(() => message.react("🇲")
+	.then(() => message.react("🇪")
+	.then(() => message.react("🇹")
+)))); 
+
 //this should respond to Damet Bot when he says 'pineapple on pizza is ok'
-    if (message.content === 'pineapple on pizza is ok')
-        message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.");
+if ( (msg.includes('pineapple on pizza is ok') &&
+(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name)))){
+message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};
 
 //this should respond to anyone that says 'koch bot'
-    if (msg.includes("koch bot"))
-        message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary');
+if ( (msg.includes("koch bot") &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+		message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary')};
     
 //Emoting commands
     if (msg.includes("guido")){
