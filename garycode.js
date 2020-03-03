@@ -9,7 +9,7 @@ const token = discord_token;
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
 const garyversion	=	"1.4.2"
-const garyversionnote	=	"Remove name gary, fixed game day dates, and weather messages send to dms"
+const garyversionnote	=	"Remove name gary, fixed game day dates, and weather messages send to dms, roles added for prefixed commands"
 const garylastupdate    =       "2/4/2020"
 
 //Bot Wide Variables & Constants
