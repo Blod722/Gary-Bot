@@ -8,13 +8,13 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.4.1.1 (?)"
-const garyversionnote	=	"Update game day dates, if wrong or becomes wrong pls change."
+const garyversion	=	"1.4.2"
+const garyversionnote	=	"Remove name gary, fixed game day dates, and weather messages send to dms"
 const garylastupdate    =       "2/4/2020"
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio','Fiddle win another eMLS Tournament.','The Post become a reputable news source.'];
-var GameDayDates = ["3/1/2020", "3/5/2020", "3/12/2020", "3/16/2020", "3/21/2020", "4/1/2020", "3/7/2020", "3/14/2020", "3/21/2020", "4/5/2020", "4/11/2020", "4/18/2020", "4/26/2020", "5/2/2020", "5/6/2020", "5/9/2020", "5/16/2020", "5/23/2020", "5/27/2020", "5/30/2020", "6/13/2020", "6/20/2020", "6/27/2020", "7/1/2020", "7/4/2020", "7/11/2020", "7/15/2020", "7/19/2020", "7/25/2020", "8/1/2020", "8/8/2020", "8/12/2020", "8/15/2020", "8/22/2020", "8/29/2020", "9/12/2020", "9/19/2020", "9/26/2020", "10/4/2020"]
+var GameDayDates = ["03/01/2020", "03/05/2020", "03/12/2020", "03/16/2020", "03/21/2020", "04/01/2020", "03/07/2020", "03/14/2020", "03/21/2020", "04/05/2020", "04/11/2020", "04/18/2020", "04/26/2020", "05/02/2020", "05/06/2020", "05/09/2020", "05/16/2020", "05/23/2020", "05/27/2020", "05/30/2020", "06/13/2020", "06/20/2020", "06/27/2020", "7/1/2020", "07/04/2020", "07/11/2020", "07/15/2020", "07/19/2020", "07/25/2020", "08/01/2020", "08/08/2020", "08/12/2020", "08/15/2020", "08/22/2020", "08/29/2020", "09/12/2020", "09/19/2020", "09/26/2020", "10/04/2020"]
 
 //This next part is specifically code to check what day it is.
 //This code only checks once each time gary reloads
@@ -187,10 +187,6 @@ let zipCode = message.content.split("weather ")[1];
 			const lostlinkemoji = message.guild.emojis.find(emoji => emoji.name === 'lost_link');
 		    message.react(lostlinkemoji)
 	    };
-// When someone asks why his name is gary it responds with 'cause thats what my name is'
-    if (msg.includes("name")) {
-        if (msg.includes("gary"))
-            message.reply("Cause that's what my name is.")};
 
 //WEATHER FUNCTION
 if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
@@ -285,7 +281,7 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 				    }
 					  ]
 					};
-				message.channel.send({ embed });}
+				message.author.send("Here's the weather!" + { embed });}
 				}
 			);
 		}
