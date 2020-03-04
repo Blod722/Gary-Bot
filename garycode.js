@@ -8,8 +8,8 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.4.2"
-const garyversionnote	=	"Remove name gary, fixed game day dates, and weather messages send to dms, roles added for prefixed commands"
+const garyversion	=	"1.4.3"
+const garyversionnote	=	"fixed pineapple pizza command, cleaned up and prettierized(?) some gary weather stuff"
 const garylastupdate    =       "3/3/2020"
 
 //Bot Wide Variables & Constants
@@ -139,9 +139,9 @@ message.react("🇩")
 )))); 
 
 //this should respond to Damet Bot when he says 'pineapple on pizza is ok'
-//if ( (msg.includes('pineapple on pizza is ok') &&
-//	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name)))){
-//		message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};
+if ( (msg.includes('pineapple on pizza is ok') &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name))))){
+		message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};
 
 //this should respond to anyone that says 'koch bot'
 if ( (msg.includes("koch bot") &&
