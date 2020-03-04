@@ -10,7 +10,7 @@ const token = discord_token;
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
 const garyversion	=	"1.4.2"
 const garyversionnote	=	"Remove name gary, fixed game day dates, and weather messages send to dms, roles added for prefixed commands"
-const garylastupdate    =       "2/4/2020"
+const garylastupdate    =       "3/3/2020"
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio','Fiddle win another eMLS Tournament.','The Post become a reputable news source.'];
