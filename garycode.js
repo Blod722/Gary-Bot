@@ -139,14 +139,14 @@ message.react("🇩")
 )))); 
 
 //this should respond to Damet Bot when he says 'pineapple on pizza is ok'
-if ( (msg.includes('pineapple on pizza is ok') &&
-(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name)))){
-message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};
+//if ( (msg.includes('pineapple on pizza is ok') &&
+//	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name)))){
+//		message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};
 
 //this should respond to anyone that says 'koch bot'
-//if ( (msg.includes("koch bot") &&
-//	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
-//		message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary')};
+if ( (msg.includes("koch bot") &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+		message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary')};
     
 //Emoting commands
     if (msg.includes("guido")){
