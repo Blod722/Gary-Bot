@@ -284,7 +284,8 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 				    }
 					  ]
 					};
-				message.author.send("Here's the weather!" + { embed });}
+				message.author.send("Here's the weather!");
+				message.author.send({ embed });}
 				}
 			);
 		}
