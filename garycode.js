@@ -8,13 +8,13 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.4.1.1 (?)"
-const garyversionnote	=	"Update game day dates, if wrong or becomes wrong pls change."
-const garylastupdate    =       "2/4/2020"
+const garyversion	=	"1.4.2"
+const garyversionnote	=	"Remove name gary, fixed game day dates, and weather messages send to dms, roles added for prefixed commands"
+const garylastupdate    =       "3/3/2020"
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio','Fiddle win another eMLS Tournament.','The Post become a reputable news source.'];
-var GameDayDates = ["3/1/2020", "3/5/2020", "3/12/2020", "3/16/2020", "3/21/2020", "4/1/2020", "3/7/2020", "3/14/2020", "3/21/2020", "4/5/2020", "4/11/2020", "4/18/2020", "4/26/2020", "5/2/2020", "5/6/2020", "5/9/2020", "5/16/2020", "5/23/2020", "5/27/2020", "5/30/2020", "6/13/2020", "6/20/2020", "6/27/2020", "7/1/2020", "7/4/2020", "7/11/2020", "7/15/2020", "7/19/2020", "7/25/2020", "8/1/2020", "8/8/2020", "8/12/2020", "8/15/2020", "8/22/2020", "8/29/2020", "9/12/2020", "9/19/2020", "9/26/2020", "10/4/2020"]
+var GameDayDates = ["03/01/2020", "03/05/2020", "03/12/2020", "03/16/2020", "03/21/2020", "04/01/2020", "03/07/2020", "03/14/2020", "03/21/2020", "04/05/2020", "04/11/2020", "04/18/2020", "04/26/2020", "05/02/2020", "05/06/2020", "05/09/2020", "05/16/2020", "05/23/2020", "05/27/2020", "05/30/2020", "06/13/2020", "06/20/2020", "06/27/2020", "7/1/2020", "07/04/2020", "07/11/2020", "07/15/2020", "07/19/2020", "07/25/2020", "08/01/2020", "08/08/2020", "08/12/2020", "08/15/2020", "08/22/2020", "08/29/2020", "09/12/2020", "09/19/2020", "09/26/2020", "10/04/2020"]
 
 //This next part is specifically code to check what day it is.
 //This code only checks once each time gary reloads
@@ -113,37 +113,51 @@ let zipCode = message.content.split("weather ")[1];
         message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!');
 
     if (msg.startsWith(prefix + ' topic')) {
-        var SResponse = Starters[Math.floor(Math.random() * (Starters.length -1 ) + 1)]
-            message.channel.send(SResponse)};
-    
-    if ( (msg.startsWith(prefix + ' debug') &&
-       (message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
-            debug = new Discord.RichEmbed ()
-            .setAuthor("Gary Bot Debug Menu")
-	    .setDescription ("Last Update - ", garylastupdate)
-            .setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
-            .addField (garyversion, garyversionnote)
-	    .addField ("Current Time", garytime)
-            .setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
-            .setColor ("F26522");
-        message.channel.send({embed:debug})};
-	
+if ( (msg.startsWith(prefix + ' github') &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+		message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**')};
+
+if ( (msg.startsWith(prefix + ' cincy chants') &&
+(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+	message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!')};
+if ( (msg.startsWith(prefix + ' cincychants') &&
+	message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name)))){
+		message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!')};
+if ( (msg.startsWith(prefix + ' topic') &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+	var SResponse = Starters[Math.floor(Math.random() * (Starters.length -1 ) + 1)]
+		message.channel.send(SResponse)};
+
+if ( (msg.startsWith(prefix + ' debug') &&
+(message.member.roles.some(r => ["Gary-Bot Developers","Admins","Commissioners"].includes(r.name)))) ){
+	debug = new Discord.RichEmbed ()
+	.setAuthor("Gary Bot Debug Menu")
+.setDescription ("Last Update - ", garylastupdate)
+	.setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
+	.addField (garyversion, garyversionnote)
+.addField ("Current Time", garytime)
+	.setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
+	.setColor ("F26522");
+		message.channel.send({embed:debug})};
+
 //When someone says 'Damn It' it reacts in letters saying 'Damet'
-    if (msg.includes('damn it'))
-        message.react("🇩")
-            .then(() => message.react("🇦")
-            .then(() => message.react("🇲")
-            .then(() => message.react("🇪")
-            .then(() => message.react("🇹")
-        )))); 
-    
+if (msg.includes('damn it'))
+message.react("🇩")
+	.then(() => message.react("🇦")
+	.then(() => message.react("🇲")
+	.then(() => message.react("🇪")
+	.then(() => message.react("🇹")
+)))); 
+
 //this should respond to Damet Bot when he says 'pineapple on pizza is ok'
-    if (message.content === 'pineapple on pizza is ok')
-        message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.");
+if ( (msg.includes('pineapple on pizza is ok') &&
+(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name)))){
+message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of Pinapple. They literally arn't suppose to be on it, the italians said so. The Late Great Gordan Ramsey himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise. It's wrong, Completely and udderly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};
 
 //this should respond to anyone that says 'koch bot'
-    if (msg.includes("koch bot"))
-        message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary');
+if ( (msg.includes("koch bot") &&
+	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
+		message.channel.send('"The real reason we kicked Koch off the team was !pizza" - Gary')};
     
 //Emoting commands
     if (msg.includes("guido")){
@@ -187,10 +201,6 @@ let zipCode = message.content.split("weather ")[1];
 			const lostlinkemoji = message.guild.emojis.find(emoji => emoji.name === 'lost_link');
 		    message.react(lostlinkemoji)
 	    };
-// When someone asks why his name is gary it responds with 'cause thats what my name is'
-    if (msg.includes("name")) {
-        if (msg.includes("gary"))
-            message.reply("Cause that's what my name is.")};
 
 //WEATHER FUNCTION
 if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
@@ -285,7 +295,7 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 				    }
 					  ]
 					};
-				message.channel.send({ embed });}
+				message.author.send("Here's the weather!" + { embed });}
 				}
 			);
 		}
