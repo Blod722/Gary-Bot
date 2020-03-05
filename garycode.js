@@ -195,7 +195,7 @@ if ( (msg.includes("koch bot") &&
 if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 	if (zipCode === undefined || zipCode.length !=5 || parseInt(zipCode) === NaN)
 		{
-			message.author.send("`Invalid Zip Code. Please follow the format: gary weather <#####>`")
+			message.author.send("`Invalid Zip Code. Please follow the format: gary weather <#####>`");
 			const gthinkemoji = message.guild.emojis.find(emoji => emoji.name === 'garythink');
 				message.react(gthinkemoji)};
 				//.catch(console.error);
