@@ -198,8 +198,8 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 			message.author.send("`Invalid Zip Code. Please follow the format: gary weather <#####>`")
 			const gthinkemoji = message.guild.emojis.find(emoji => emoji.name === 'garythink');
 			message.react(gthinkemoji)};
-			.catch(console.error);
-				return;
+			//.catch(console.error);
+				//return;
 		}
 	else
 		{
@@ -215,7 +215,7 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 				{
 					if (parsedWeather.cod === '404')
 						{
-							message.channel.send("`This zip code does not exist or there is no information available.`");
+							message.author.send("`This zip code does not exist or there is no information available.`");
 						}
 					else
 						{
