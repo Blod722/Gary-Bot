@@ -291,7 +291,7 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 				message.author.send("Here's the weather!");
 				message.author.send({ embed });}
 				const upgemoji = message.guild.emojis.find(emoji => emoji.name === 'upgary');
-				message.react(upgemoji)};
+				message.react(upgemoji);
 				}
 			);
 		}
