@@ -9,7 +9,7 @@ const token = discord_token;
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
 const garyversion	=	"1.4.3"
-const garyversionnote	=	"fixed pineapple pizza command, weather command now upgrays if it works, garythinks if it doesn't."
+const garyversionnote	=	"fixed pineapple pizza command, weather command now upgarys if it works, garythinks if it doesn't."
 const garylastupdate    =       "3/3/2020"
 
 //Bot Wide Variables & Constants
