@@ -8,9 +8,9 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.4.3"
-const garyversionnote	=	"fixed pineapple pizza command, weather command now upgarys if it works, garythinks if it doesn't."
-const garylastupdate    =       "3/3/2020"
+const garyversion	=	"1.4.4"
+const garyversionnote	=	"blod doesnt know how the weather command works so he has to make another update"
+const garylastupdate    =       "3/5/2020"
 
 //Bot Wide Variables & Constants
 const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio','Fiddle win another eMLS Tournament.','The Post become a reputable news source.'];
@@ -197,9 +197,9 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 		{
 			message.author.send("`Invalid Zip Code. Please follow the format: gary weather <#####>`")
 			const gthinkemoji = message.guild.emojis.find(emoji => emoji.name === 'garythink');
-			message.react(gthinkemoji)};
-			//.catch(console.error);
-				//return;
+				message.react(gthinkemoji)};
+				//.catch(console.error);
+					//return;
 		}
 	else
 		{
@@ -216,6 +216,8 @@ if (msg.startsWith(prefix + ' weather') && message.author.bot === false)
 					if (parsedWeather.cod === '404')
 						{
 							message.author.send("`This zip code does not exist or there is no information available.`");
+							const gthinkemoji = message.guild.emojis.find(emoji => emoji.name === 'garythink');
+								message.react(gthinkemoji)};
 						}
 					else
 						{
