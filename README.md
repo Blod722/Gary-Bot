@@ -46,9 +46,6 @@ Gary Bot is ran on an Ubuntu based VM graciously hosted for free by Bmulley. The
 
 Everything else is secret, discover it or read the code.
 
-# Licensing
-Although the bot is Open Source, I do request that you don't recopy the code in its entirety. I have no issue with you using bits and pieces for your own projects.
-
 # Credits
 **Blod#6563** - Coding.
 
