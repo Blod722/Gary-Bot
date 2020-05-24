@@ -59,3 +59,5 @@ Although the bot is Open Source, I do request that you don't recopy the code in 
 **pw8164#8056** - Coding
 
 **Mainframe#4083** - Coding
+
+**chalupa Bman#8008** - sick ol banner for the readme
