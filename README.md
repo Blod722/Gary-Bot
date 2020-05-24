@@ -9,7 +9,22 @@
   <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
 </a>
 </p>
+<p align="center">
+<a href=#merged>
+  <img src="https://badgen.net/github/merged-prs/blod722/gary-bot">
+</a>
+<a href=#commits>
+  <img src="https://badgen.net/github/commits/blod722/gary-bot">
+</a>
+<a href=#release>
+  <img src="https://badgen.net/github/release/blod722/gary-bot">
+</a>
+<a href=#license>
+  <img src="https://badgen.net/github/license/blod722/gary-bot">
+</a>
+</p>
   
+                                                                
 # What Is Gary Bot?
 Gary bot is a meme-y and functional bot to be used for /r/FCCincinnati's Discord server. The intended use is to be a replacement for an old bot that is no longer hosted, as well as a easily customizable bot that can add or remove code as needed by the Discord. Written in JavaScript using Discord.JS, Gary Bot is the first fully functional code that I (Blod) has written and been used publicly. A lot of help as well as server hosting was done by Bmulley.
 
