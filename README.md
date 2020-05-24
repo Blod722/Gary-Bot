@@ -1,7 +1,7 @@
 <p align="center">
 <h1>Gary Bot</h1>
-<h3>"Because that's what his name is."</h3>
-<h5>Created with love for /r/FCCincinnati's Discord</h5>
+<p style="text-align:center"><b>"Because that's what his name is."</b></p>
+<p style="text-align:center">Created with love for /r/FCCincinnati's Discord</p>
 <a href="https://discord.gg/BWdmn3G">
   <img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" />
 </a>
@@ -9,7 +9,7 @@
   <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
 </a>
 </p>
-<p align="center">
+<p>
 <a href=#merged>
   <img src="https://badgen.net/github/merged-prs/blod722/gary-bot">
 </a>
