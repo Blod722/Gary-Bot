@@ -2,9 +2,8 @@
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
-Official Discord -->
 <a href="https://discord.gg/BWdmn3G">
-  <img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" />
+  <img src="https://badgen.net/badge/icon/Official%20Discord/7289da?icon=discord&label" />
 </a>
 <a href="https://twitter.com/intent/follow?screen_name=FCCincyDiscord"> 
   <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
