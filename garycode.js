@@ -1,3 +1,8 @@
+//Pulling Discord.js Library and Starting Bot from Token
+const Discord = require ('discord.js');
+const bot = new Discord.Client();
+const fetch = require('node-fetch');
+const {discord_token} = require('./config.json'); 
 var fs = require('fs');
 
 const token = discord_token;
@@ -32,7 +37,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
-    console.log('Bot Ready!');
+    console.log('`Logged in as ${client.user.tag}!`');
     var garybottestchannel = bot.channels.get('577326593639317525');
     const garydabemoji = bot.emojis.find(emoji => emoji.name === "garydab");
 
