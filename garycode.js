@@ -11,13 +11,13 @@ const garylastupdate    =       "5/23/2020"
 //Bot Wide Variables & Constants
 
 //this little piggie put all the activities in a file and reads them
-const Activities = fs.readFileSync("./Activities.txt").toString().split("\n");
+const Activities = fs.readFileSync("./Files/Activities.txt").toString().split("\n");
 for (i in Activities) {
 	console.log(Activities[i]);
 }
 
 //and this little piggie put all the game day dates in a file and reads them
-const GameDayDates = fs.readFileSync("./GameDayDates.txt").toString().split("\n");
+const GameDayDates = fs.readFileSync("./Files/GameDayDates.txt").toString().split("\n");
 for (i in GameDayDates) {
 	console.log(GameDayDates[i]);
 }
