@@ -2,11 +2,15 @@
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
+Official Discord -->
 <a href="https://discord.gg/BWdmn3G">
   <img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" />
 </a>
 <a href="https://twitter.com/intent/follow?screen_name=FCCincyDiscord"> 
   <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
+</a>
+<a href="https://reddit.com/r/fccincinnati">
+  <img src="https://img.shields.io/reddit/subreddit-subscribers/fccincinnati?label=Subscribe%20to%20r%2FFCCincinnati&style=social" />
 </a>
 </p>
 <p align="center">
