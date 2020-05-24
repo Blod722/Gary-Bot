@@ -1,8 +1,18 @@
-# Gary Bot
-"Because that's what his name is."
+<p align="center">
+  <h1>Gary Bot</h2>
+<h2>"Because that's what his name is."<h2>
 
-Created with love for /r/FCCincinnati's Discord https://discord.gg/Bt6ytSQ
+<h3>Created with love for /r/FCCincinnati's Discord</h3>
 
+
+<a href="https://discord.gg/sMFvFsG">
+  <img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" />
+</a>
+<a href="https://twitter.com/intent/follow?screen_name=FCCincyDiscord"> 
+  <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
+</a>
+<p align="center">
+  
 # What Is Gary Bot?
 Gary bot is a meme-y and functional bot to be used for /r/FCCincinnati's Discord server. The intended use is to be a replacement for an old bot that is no longer hosted, as well as a easily customizable bot that can add or remove code as needed by the Discord. Written in JavaScript using Discord.JS, Gary Bot is the first fully functional code that I (Blod) has written and been used publicly. A lot of help as well as server hosting was done by Bmulley.
 
