@@ -9,7 +9,7 @@
   <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
 </a>
 </p>
-<p>
+<p style=text-align:center">
 <a href=#merged>
   <img src="https://badgen.net/github/merged-prs/blod722/gary-bot">
 </a>
