@@ -9,7 +9,7 @@
   <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
 </a>
 <a href="https://reddit.com/r/fccincinnati">
-  <img src="https://img.shields.io/reddit/subreddit-subscribers/fccincinnati?label=r%2FFCCincinnati&style=social" />
+  <img src="https://img.shields.io/reddit/subreddit-subscribers/FCCincinnati?label=%2Fr%2FFCCincinnati&style=social" />
 </a>
 </p>
 <p align="center">
