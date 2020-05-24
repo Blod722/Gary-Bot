@@ -16,6 +16,9 @@
 <a href=#commits>
   <img src="https://badgen.net/github/commits/blod722/gary-bot">
 </a>
+<a href=#lastcommit>
+  <img src="https://badgen.net/github/last-commit/blod722/gary-bot">
+</a>
 <a href=#release>
   <img src="https://badgen.net/github/release/blod722/gary-bot">
 </a>
