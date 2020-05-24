@@ -1,6 +1,6 @@
 <p align="center">
-  <h1>Gary Bot</h2>
-<h2>"Because that's what his name is."<h2>
+<h1>Gary Bot</h1>
+<h2>"Because that's what his name is."</h2>
 <h3>Created with love for /r/FCCincinnati's Discord</h3>
 <a href="https://discord.gg/BWdmn3G">
   <img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" />
