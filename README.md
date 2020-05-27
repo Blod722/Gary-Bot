@@ -1,4 +1,4 @@
-<p align ="center"><img src="https://i.imgur.com/V7NUSB5.png"></p>
+<p align ="center"><img src="https://cdn.discordapp.com/attachments/507206184521039902/715201459104514058/garybot.png" width="662" height="114"></p>
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
