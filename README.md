@@ -1,4 +1,4 @@
-<center><img src="https://i.imgur.com/V7NUSB5.png"></center>
+<p align ="center"><img src="https://i.imgur.com/V7NUSB5.png"></p>
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
