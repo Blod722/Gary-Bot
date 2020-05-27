@@ -1,4 +1,4 @@
-<h1>placeholder for banner</h1>
+<center><img src="https://cdn.discordapp.com/attachments/507206184521039902/715201459104514058/garybot.png"></center>
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
