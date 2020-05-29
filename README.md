@@ -25,7 +25,7 @@
 <a href=#release>
   <img src="https://badgen.net/github/release/blod722/gary-bot">
 </a>
-<a href="/blob/master/LICENSE">
+<a href="LICENSE">
   <img src="https://badgen.net/github/license/blod722/gary-bot">
 </a>
 </p>
