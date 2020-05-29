@@ -2,19 +2,30 @@
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
 const fetch = require('node-fetch');
-const {discord_token} = require('./config.json');
+const {discord_token} = require('./config.json'); 
+var fs = require('fs');
 
 const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.4.4"
-const garyversionnote	=	"blod doesnt know how the weather command works so he has to make another update"
-const garylastupdate    =       "3/5/2020"
+const garyversion	=	"1.5"
+const garyversionnote	=	"Activities and Game Day Dates should all be located in a seperate file now, if these work I (blod) will put more long commands in the seperate files for code cleanup"
+const garylastupdate    =       "5/23/2020"
 
 //Bot Wide Variables & Constants
-const Activities = ['Soccer, what else?','The Bengals - SIKE!','Moomba and Chalupa make the 2020 Discord Scarf.','Music Hall complain about the stadium again.','Guido give out red cards.','Adi complain about "team identity".','Hoyte, he is open! Still open!','Bone take us to the zone.','Tyton save another ball.','Koch get cut.','Berding as he makes a press statement.','Dennis go full on Denbot mode.','Buzz make another poop emote.','Mainframe love Jimmy from afar.','Ope Shirts sell out.','Ox edit more Wikipedia pages.','Blod as he says something stupid.','Fiddle win another FCC eMLS match.','Franklin Krum update Cincy Chants.','Fruity dominate another Rocket League match.','Lamah, Hoyte, and Bone get cut','Casuals pronounce it as Jans not Yawhns','The Premier League cause it is Pro-Rel','Richey post more memes on twitter', 'Well, actually, listening to Knifey Lion Radio','Fiddle win another eMLS Tournament.','The Post become a reputable news source.'];
-var GameDayDates = []
+
+//this little piggie put all the activities in a file and reads them
+const Activities = fs.readFileSync("./Files/Activities.txt").toString().split("\n");
+for (i in Activities) {
+	console.log(Activities[i]);
+}
+
+//and this little piggie put all the game day dates in a file and reads them
+const GameDayDates = fs.readFileSync("./Files/GameDayDates.txt").toString().split("\n");
+for (i in GameDayDates) {
+	console.log(GameDayDates[i]);
+}
 
 //This next part is specifically code to check what day it is.
 //This code only checks once each time gary reloads
@@ -26,7 +37,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
-    console.log('Bot Ready!');
+    console.log('`Logged in as ${client.user.tag}!`');
     var garybottestchannel = bot.channels.get('577326593639317525');
     const garydabemoji = bot.emojis.find(emoji => emoji.name === "garydab");
 
@@ -125,6 +136,12 @@ if ( (msg.startsWith(prefix + ' debug') &&
 	.setFooter("Created by Bmulley, Blod, and Buzz for /r/FCCincinnati Discord.")
 	.addField (garyversion, garyversionnote)
 .addField ("Current Time", garytime)
+	if (GameDayDates.includes(today)) {
+		.addField("Today IS Game Day")
+	}
+	else {
+		.addField("Today IS NOT Game Day")
+	}
 	.setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
 	.setColor ("F26522");
 		message.channel.send({embed:debug})};

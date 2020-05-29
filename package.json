@@ -1,6 +1,6 @@
 {
   "name": "gary", 
-  "version": "1.4.1.1",
+  "version": "1.5",
   "description": "Beacuse that's what its name is.",
   "main": "garycode.js",
   "scripts": {
@@ -12,10 +12,10 @@
     "url": "https://github.com/Blod722/Gary-Bot.git"
   },
   "keywords": [
-    "dsa"
+    "Discord"
   ],
   "author": "Blod",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bufferutil": "^4.0.1",
     "discord.js": "^11.5.1",
