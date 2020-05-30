@@ -137,10 +137,10 @@ if ( (msg.startsWith(prefix + ' debug') &&
 	.addField (garyversion, garyversionnote)
 .addField ("Current Time", garytime)
 	if (GameDayDates.includes(today)) {
-		.addField("Today IS Game Day")
+		.addField ("Today IS Game Day", " ")
 	}
 	else {
-		.addField("Today IS NOT Game Day")
+		.addField ("Today IS NOT Game Day", " ")
 	}
 	.setThumbnail ("https://cdn.discordapp.com/attachments/535191274697785356/581657193489629194/518082374576111627.png")
 	.setColor ("F26522");
