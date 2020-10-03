@@ -82,6 +82,7 @@ var Starters = ['If you could sign any soccer player you wanted for FC Cincinnat
 var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime.", "Coffee? Redbull? Cocaine? Whats the juice for today?", "Just woke up, and yes. Bots need to sleep as well."]
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
+const hoperoni = /^hope\b|\s?[^a-z]+\bhope[^a-z]?\b|^hope[^a-z]$/i;
 const ooftastic = /^oof\b|^o+oof\b|\s?[^a-z]+\boof[^a-z]?\b|\s?[^a-z]o+oof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
 var morningmsg = ["morning","morning.","morning!","morn","mornin","mornin'","mourning","mourning.","morning all","morning all.","morning all!","morning?","good morning","good morning.","it is morning","it's morning"]
@@ -170,6 +171,12 @@ if ( (msg.includes("koch bot") &&
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
             message.react(opeemoji)};   
     
+
+    if (hoperoni.test(message.content.toLowerCase())) {
+        const watchitemoji = message.guild.emojis.find(emoji => emoji.name === 'spencer_watchitbuddy');
+            message.react(watchitemoji)};   
+ 
+
     if (message.content.toLowerCase() == "oi") {
         const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
             message.react(oiemoji)};
