@@ -39,10 +39,11 @@ today = mm + '/' + dd + '/' + yyyy;
 //Turns on Gary Bot and sends 'Bot Ready!' in the console that gary is run on.
 bot.on('ready', () =>{
     console.log('`Logged in as ${client.user.tag}!`');
+    console.log(garylocation);
     var garybottestchannel = bot.channels.get('577326593639317525');
     const garydabemoji = bot.emojis.find(emoji => emoji.name === "garydab");
 
-    garybottestchannel.sendMessage(`${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}`+"\n__**"+garyversion+" Patch Notes**__\n"+garyversionnote+"\n\n"+garylocation);
+    garybottestchannel.sendMessage(`${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}`+"\n__**"+garyversion+" Patch Notes**__\n"+garyversionnote);
 	
 	//This entire section randomizes the Activity that Gary is doing with something in the Activities Constant
         setInterval(() => {
