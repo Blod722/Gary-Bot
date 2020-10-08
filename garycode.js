@@ -12,6 +12,7 @@ const token = discord_token;
 const garyversion	=	"1.5"
 const garyversionnote	=	"Activities and Game Day Dates should all be located in a seperate file now, if these work I (blod) will put more long commands in the seperate files for code cleanup"
 const garylastupdate    =       "5/23/2020"
+const garylocation      =       `Gary directory: ${process.cwd()}`+"\nGary file: "+ __filename
 
 //Bot Wide Variables & Constants
 
@@ -41,7 +42,7 @@ bot.on('ready', () =>{
     var garybottestchannel = bot.channels.get('577326593639317525');
     const garydabemoji = bot.emojis.find(emoji => emoji.name === "garydab");
 
-    garybottestchannel.sendMessage(`${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}`+"\n__**"+garyversion+" Patch Notes**__\n"+garyversionnote);
+    garybottestchannel.sendMessage(`${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}${garydabemoji}`+"\n__**"+garyversion+" Patch Notes**__\n"+garyversionnote+"\n\n"+garylocation);
 	
 	//This entire section randomizes the Activity that Gary is doing with something in the Activities Constant
         setInterval(() => {
