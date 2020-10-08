@@ -83,6 +83,7 @@ var GaryMorning = ["Mornin'","Early bird gets the worm", "Match day? No? Bedtime
 const bonerpatrol = /^bone\b|\s?[^a-z]+\bbone[^a-z]?\b|^bone[^a-z]$/i;
 const operoni = /^ope\b|\s?[^a-z]+\bope[^a-z]?\b|^ope[^a-z]$/i;
 const hoperoni = /^hope\b|\s?[^a-z]+\bhope[^a-z]?\b|^hope[^a-z]$/i;
+const barreloflaughs = /^barrel\b|\s?[^a-z]+\bbarrel[^a-z]?\b|^barrel[^a-z]$/i;
 const ooftastic = /^oof\b|^o+oof\b|\s?[^a-z]+\boof[^a-z]?\b|\s?[^a-z]o+oof[^a-z]?\b|^oof[^a-z]$/i;
 const prefix = "gary";
 var morningmsg = ["morning","morning.","morning!","morn","mornin","mornin'","mourning","mourning.","morning all","morning all.","morning all!","morning?","good morning","good morning.","it is morning","it's morning"]
@@ -171,12 +172,14 @@ if ( (msg.includes("koch bot") &&
         const opeemoji = message.guild.emojis.find(emoji => emoji.name === 'ope');
             message.react(opeemoji)};   
     
-
     if (hoperoni.test(message.content.toLowerCase())) {
-        const watchitemoji = message.guild.emojis.find(emoji => emoji.name === 'spencer_watchitbuddy');
-            message.react(watchitemoji)};   
+        const donthopeemoji = message.guild.emojis.find(emoji => emoji.name === 'dont_hope');
+            message.react(donthopeemoji)};   
+	
+    if (barreloflaughs.test(message.content.toLowerCase())) {
+        const barrelemoji = message.guild.emojis.find(emoji => emoji.name === 'alvaro_barrel');
+            message.react(barrelemoji)};   
  
-
     if (message.content.toLowerCase() == "oi") {
         const oiemoji = message.guild.emojis.find(emoji => emoji.name === 'oi');
             message.react(oiemoji)};
