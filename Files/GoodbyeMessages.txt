@@ -1,1 +1,3 @@
-
+member.user.username + " ripped their contract in half, I guess that mean's it's no longer valid."
+member.user.username + "'s contract has not been renewed for **/r/FCCincinnati**."
+member.user.username + " decided to go play for /r/TheMassive."
