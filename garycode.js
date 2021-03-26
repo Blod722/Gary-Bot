@@ -40,7 +40,7 @@ for (i in GDWelcome) {
 
 //goodbye messages from file
 const Left = fs.readFileSync("./Gary-Bot/Files/GoodbyeMessages.txt").toString().split("\n");
-for (i in left) {
+for (i in Left) {
 	console.log(Left[i]);
 }
 
