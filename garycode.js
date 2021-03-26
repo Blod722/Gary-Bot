@@ -29,8 +29,8 @@ for (i in GameDayDates) {
 }
 //welcome messages from file
 const Welcome = fs.readFileSync("./Gary-Bot/Files/WelcomeMessages.txt").toString().split("\n");
-for (i in GDWelcome) {
-	console.log(GDWelcome[i]);
+for (i in Welcome) {
+	console.log(Welcome[i]);
 }
 //game day welcome messages from file
 const GDWelcome = fs.readFileSync("./Gary-Bot/Files/GameDayWelcomeMessages.txt").toString().split("\n");
@@ -40,8 +40,8 @@ for (i in GDWelcome) {
 
 //goodbye messages from file
 const Left = fs.readFileSync("./Gary-Bot/Files/GoodbyeMessages.txt").toString().split("\n");
-for (i in GDWelcome) {
-	console.log(GDWelcome[i]);
+for (i in left) {
+	console.log(Left[i]);
 }
 
 //This next part is specifically code to check what day it is.
