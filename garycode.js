@@ -9,9 +9,9 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.5"
-const garyversionnote	=	"Activities and Game Day Dates should all be located in a seperate file now, if these work I (blod) will put more long commands in the seperate files for code cleanup"
-const garylastupdate    =       "5/23/2020"
+const garyversion	=	"1.5.2"
+const garyversionnote	=	"gary was dying cause of a small update I added, fixed it temperarily, but i want to fix it properly soon"
+const garylastupdate    =       "04/01/2021"
 const garylocation      =       `Gary directory: ${process.cwd()}`+"\nGary file: "+ __filename
 
 //Bot Wide Variables & Constants
