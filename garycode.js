@@ -9,9 +9,9 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.5.2"
-const garyversionnote	=	"i have done nothing but update gary's version notes to see if bot will redownload this code and fix timing error with discord status"
-const garylastupdate    =       "01/02/2022"
+const garyversion	=	"1.5.3"
+const garyversionnote	=	"Updated game dates for the 2022 seasons"
+const garylastupdate    =       "02/27/2022"
 const garylocation      =       `Gary directory: ${process.cwd()}`+"\nGary file: "+ __filename
 
 //Bot Wide Variables & Constants
