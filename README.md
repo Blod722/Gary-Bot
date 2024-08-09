@@ -1,4 +1,4 @@
-<p align ="center"><img src="./Gary-Bot/Files/garybot.png" width="662" height="114"></p>
+<p align ="center"><img src="./Files/garybot.png" width="662" height="114"></p>
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
