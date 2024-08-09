@@ -1,4 +1,4 @@
-<p align ="center"><img src="https://cdn.discordapp.com/attachments/507206184521039902/715201459104514058/garybot.png" width="662" height="114"></p>
+<p align ="center"><img src="./Gary-Bot/Files/garybot.png" width="662" height="114"></p>
 <p align="center"><b>"Because that's what his name is."</b></p>
 <p align="center">Created with love for /r/FCCincinnati's Discord</p>
 <p align="center">
@@ -6,7 +6,7 @@
   <img src="https://badgen.net/badge/icon/Official%20Discord/7289da?icon=discord&label" />
 </a>
 <a href="https://twitter.com/intent/follow?screen_name=FCCincyDiscord"> 
-  <img src="https://badgen.net/twitter/follow/FCCincyDiscord?icon=twitter&label=%40FCCincyDiscord" alt="Official Twitter Handle" />
+  <img src="https://badgen.net/badge/icon/%40FCCincyDiscord?icon=twitter&label" alt="Official Twitter Handle" />
 </a>
 <a href="https://reddit.com/r/fccincinnati">
   <img src="https://img.shields.io/reddit/subreddit-subscribers/FCCincinnati?label=%2Fr%2FFCCincinnati&style=social" />
