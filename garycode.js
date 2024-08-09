@@ -9,9 +9,9 @@ const token = discord_token;
 
 
 ////////////////////// 	VERSION INFO - Add version number and patch notes here
-const garyversion	=	"1.5.3"
-const garyversionnote	=	"Updated game dates for the 2022 seasons"
-const garylastupdate    =       "02/27/2022"
+const garyversion	=	"1.5.4"
+const garyversionnote	=	"Updated game dates for the rest of the 2024 season, fixed a few bugs preventing certain commands from executing, removed information related to cincy chants as it is dead"
+const garylastupdate    =       "08/09/2024"
 const garylocation      =       `Gary directory: ${process.cwd()}`+"\nGary file: "+ __filename
 
 //Bot Wide Variables & Constants
@@ -137,12 +137,6 @@ let zipCode = message.content.split("weather ")[1];
 if ( (msg.startsWith(prefix + ' github') &&
 	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
 		message.channel.send('The Github page can be found here https://github.com/Blod722/Gary-Bot - All documentations and explainations of Gary Bot can be found on the README.md. **If any bugs arise for Gary Bot, please report them to the "Issues" section of the Github Page**')};
-if ( (msg.startsWith(prefix + ' cincy chants') &&
-(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
-	message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!')};
-if ( (msg.startsWith(prefix + ' cincychants') &&
-	message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name)))){
-		message.channel.send('Cincy Chants is an app developed by discord user <@124537337156730882> that displays all chants currently used by FC Cincinnati supporters. It also contains a "Real Time" feature that shows what chant is currently being sung by The Bailey during games. Download it for free on Apple and Android devices by searching "Cincy Chants" in your local app store!')};
 if ( (msg.startsWith(prefix + ' topic') &&
 	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners"].includes(r.name))))){
 	var SResponse = Starters[Math.floor(Math.random() * (Starters.length -1 ) + 1)]
@@ -169,7 +163,7 @@ message.react("🇩")
 	.then(() => message.react("🇹")
 )))); 
 
-//this should respond to Damet Bot when he says 'pineapple on pizza is ok'
+//this should respond to Pat Noonan Bot when he says 'pineapple on pizza is ok'. (8/9/24: I think this function is broken. Two bots talking to each other is annoying anyway.)
 if ( (msg.includes('pineapple on pizza is ok') &&
 	(message.member.roles.some(r => ["Practice Squad","Benchwarmers","Starters","Team Captains","All Stars","Commissioners","Mee6"].includes(r.name))))){
 		message.reply("Please tell me why, just why? Why do you think Pineapple is okay on pizza? It's a purely tasteless and disgusting mess. When you get pineapple on pizza you literally ruin it for everyone else, no one will eat that nasty mess of pineapple. They literally aren't supposed to be on it, the Italians said so. The Late Great Gordon Ramsay himself even said 'You don't put fucking pineapple on pizza'. Quoted, word for word. Like how much of a disgusting human being must you be to say that pineapple is okay on pizza, after one of the world's greatest chefs told you otherwise? It's wrong. Completely and utterly wrong. The Italians cry at what we've made pizza, just a disgusting mess of dough, cheese, and pizza sauce. Topped with whatever we want, no matter the flavor. If we want it, we get it on. Absolutely putrid.")};

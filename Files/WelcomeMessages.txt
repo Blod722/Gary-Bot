@@ -1,3 +1,4 @@
+This message should not show, if you see this message @ Blod
 "Congratulations " + member + ", You've been signed to a contract by **/r/FCCincinnati!** Welcome to the team!"
 "It's offical! " + member + ", Is now playing for **/r/FCCincinnati**!"
 "This just in, " + member + " was just traded to **/r/FCCincinnati**!"
