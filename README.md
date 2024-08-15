@@ -40,8 +40,6 @@ Gary Bot is ran on an Ubuntu based VM graciously hosted for free by Bmulley. The
 # Current Commands & Functions
 **gary github** - Brings up an info box about this github page, as well as a link.
 
-**gary cincy chants** - Info box about Cincy Chants.
-
 **gary topic** - Brings up a topic to talk about.
 
 **gary weather** - shows the weather for a specific zipcode
